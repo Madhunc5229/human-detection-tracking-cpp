@@ -34,7 +34,6 @@ Continuous integration is tracked by using Travis CI and code coverage is tracke
 ## System Design and Architecture 
 The following shows the activity diagram for our proposed design : 
 
-[Phase0_UML_activity_diagram.pdf](https://github.com/Madhunc5229/human-detection-tracking-cpp/files/9730726/Phase0_UML_activity_diagram.pdf)
-
+![image](https://user-images.githubusercontent.com/90351952/194469507-a9dfbb5f-3e2f-4e71-a1e3-85f28d3e94c5.png)
 
 
