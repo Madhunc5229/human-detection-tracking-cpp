@@ -6,12 +6,12 @@ Agile Iterative Process is used for the development of this project consisting o
 ## Authors
 Sprint 1 -
  - Madhu Narra Chittibabu (Driver)
- - Sharmitha Ganesan (Navigator)
+ - [Sharmitha Ganesan](https://github.com/sharmithag) (Navigator)
  - Koundinya Vinnakota (Design Keeper)
 
 Sprint 2 -
  - Madhu Narra Chittibabu (Navigator)
- - Sharmitha Ganesan (Driver)
+ - [Sharmitha Ganesan](https://github.com/sharmithag) (Driver)
  - Koundinya Vinnakota (Design Keeper)
  
 ## Introduction
