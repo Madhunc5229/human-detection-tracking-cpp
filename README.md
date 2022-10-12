@@ -34,9 +34,9 @@ Continuous integration is tracked by using Travis CI and code coverage is tracke
 ## System Design and Architecture 
 The following shows the activity diagram for our proposed design : 
 
-![image](https://user-images.githubusercontent.com/90351952/194469507-a9dfbb5f-3e2f-4e71-a1e3-85f28d3e94c5.png)
+![image](https://user-images.githubusercontent.com/90351952/194469507-a9dfbb5f-3e2f-4e71-a1e3-85f28d3e94c5.png)  
 
-UML class diagram:
+UML class diagram:  
 
 ![uml_class_diagram](https://user-images.githubusercontent.com/61328094/195441033-67eeca29-cae8-428c-a0c8-fffe75f57949.png)
 
