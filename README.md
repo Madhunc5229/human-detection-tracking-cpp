@@ -5,14 +5,14 @@ Agile Iterative Process is used for the development of this project consisting o
 
 ## Authors
 Sprint 1 -
- - [Madhu Narra Chittibabu](https://www.linkedin.com/in/madhunc/) (Driver)
- - [Sharmitha Ganesan](https://github.com/sharmithag) (Navigator)
- - [Koundinya Vinnakota](https://github.com/koundinyavinnakota) (Design Keeper)
+ - [Madhu Narra Chittibabu](https://www.linkedin.com/in/madhunc/) (Driver) (UID: 118206196)
+ - [Sharmitha Ganesan](https://github.com/sharmithag) (Navigator) (UID: 117518931)
+ - [Koundinya Vinnakota](https://github.com/koundinyavinnakota) (Design Keeper) (UID: 118239811)
 
 Sprint 2 -
- - [Madhu Narra Chittibabu](https://www.linkedin.com/in/madhunc/) (Navigator)
- - [Sharmitha Ganesan](https://github.com/sharmithag) (Driver)
- - [Koundinya Vinnakota](https://github.com/koundinyavinnakota) (Design Keeper)
+ - [Madhu Narra Chittibabu](https://www.linkedin.com/in/madhunc/) (Navigator)(UID: 118206196)
+ - [Sharmitha Ganesan](https://github.com/sharmithag) (Driver) (UID: 117518931)
+ - [Koundinya Vinnakota](https://github.com/koundinyavinnakota) (Design Keeper) (UID: 118239811)
  
 ## Introduction
 Human Detection is a branch of Object Detection in Computer Vision. Object Detection is the task of identifying the presence of predefined types of objects in an image. This task involves both identification of the presence of the objects and identification of the rectangular boundary surrounding each object (i.e. Object Localisation). An object detection system which can detect the class “Human” can work as a Human Detection System.  
