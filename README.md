@@ -10,7 +10,7 @@ Sprint 1 -
  - [Koundinya Vinnakota](https://github.com/koundinyavinnakota) (Design Keeper) (UID: 118239811)
 
 Sprint 2 -
- - [Madhu Narra Chittibabu](https://www.linkedin.com/in/madhunc/) (Navigator)(UID: 118206196)
+ - [Madhu Narra Chittibabu](https://www.linkedin.com/in/madhunc/) (Navigator) (UID: 118206196)
  - [Sharmitha Ganesan](https://github.com/sharmithag) (Driver) (UID: 117518931)
  - [Koundinya Vinnakota](https://github.com/koundinyavinnakota) (Design Keeper) (UID: 118239811)
  
