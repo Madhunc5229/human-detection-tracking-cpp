@@ -36,5 +36,7 @@ The following shows the activity diagram for our proposed design :
 
 ![image](https://user-images.githubusercontent.com/90351952/194469507-a9dfbb5f-3e2f-4e71-a1e3-85f28d3e94c5.png)
 
+UML class diagram:
+<img alt="UML" src="UMLDiagrams/class_diagram.png" width="400" />  
 
 
