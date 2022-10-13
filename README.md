@@ -42,4 +42,5 @@ UML class diagram:
 
 #### The Quad Chart for the project can be found [here](docs/quad_chart.pdf)
 
+#### The Proposal for the project can be found [here](docs/quad_chart.pdf)
 
