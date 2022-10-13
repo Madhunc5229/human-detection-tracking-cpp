@@ -44,3 +44,5 @@ UML class diagram:
 
 #### The Proposal for the project can be found [here](docs/Proposal.pdf)
 
+#### The video explanation of the phase zero of this project can be found [here](https://youtu.be/ooPpgImk9Js)
+
