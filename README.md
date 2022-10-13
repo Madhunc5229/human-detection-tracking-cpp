@@ -40,6 +40,6 @@ UML class diagram:
 
 ![uml_class_diagram](https://user-images.githubusercontent.com/61328094/195441033-67eeca29-cae8-428c-a0c8-fffe75f57949.png)
 
-The Quad Chart for the project can be found [here](docs/quad_chart.pdf)
+#### The Quad Chart for the project can be found [here](docs/quad_chart.pdf)
 
 
