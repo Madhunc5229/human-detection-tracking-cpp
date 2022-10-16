@@ -2,6 +2,11 @@
 #define INCLUDE_YOLO_DETECT_H_
 
 #include <vector>
+// #include <opencv2/dnn.hpp>
+#include <opencv2/opencv.hpp>
+// #include <opencv2/imgproc.hpp>
+// #include <opencv2/highgui.hpp>
+
 using cv::Mat;
 
 /**
@@ -22,7 +27,7 @@ class YoloDetect{
          * @param frame inout frame
          * @return vector<Mat> frame with humans detected
          */
-        vector<Mat> detectHuman(vector<Mat> frame);
+        std::vector<Mat> detectHuman(std::vector<Mat> frame);
 
         std::vector<Mat> input_frame;
         
@@ -33,8 +38,8 @@ class YoloDetect{
          * 
          * @return vector<Mat> preprocessed frame for human detection
          */
-        vector<Mat> preProcess();
-}
+        std::vector<Mat> preProcess();
+};
 
 
 

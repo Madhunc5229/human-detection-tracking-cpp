@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.2.1)
 project (scratch)
 
+FIND_PACKAGE(OpenCV REQUIRED)
+INCLUDE_DIRECTORIES( ${OpenCV_INCLUDE_DIRS})
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Add project cmake modules to path.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake)
 
@@ -21,9 +25,8 @@ else()
 endif()
 
 include(CMakeToolsHelpers OPTIONAL)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(app)
-add_subdirectory(test)
-add_subdirectory(vendor/googletest/googletest)
+# add_subdirectory(test)
+# add_subdirectory(vendor/googletest/googletest)

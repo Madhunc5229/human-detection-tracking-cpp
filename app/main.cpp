@@ -19,5 +19,5 @@
  * @return int 
  */
 int main() {
-    
+    std::cout << "hi"<< "\n";
 }

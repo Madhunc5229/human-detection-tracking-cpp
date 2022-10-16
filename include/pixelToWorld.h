@@ -2,6 +2,7 @@
 #define INCLUDE_PIXEL_TO_WORLD_H_
 
 #include <vector>
+#include <opencv2/opencv.hpp>
 using cv::Mat;
 
 
@@ -19,7 +20,7 @@ class PixelToWorld{
          * 
          * @return vector<Mat> return the projection matrix
          */
-        vector<Mat> transformationMat();
+        std::vector<Mat> transformationMat();
 
         /**
          * @brief calculate the world co-ordinates
@@ -27,10 +28,10 @@ class PixelToWorld{
          * @param tramsformaMatrix projection matrix
          * @return vector<Mat> XYZ co-ordinates
          */
-        vector<Mat> worldPoints(std::vector<Mat> tramsformaMatrix);
+        std::vector<Mat> worldPoints(std::vector<Mat> tramsformaMatrix);
         
         double focalLength;
-}
+};
 
 
 

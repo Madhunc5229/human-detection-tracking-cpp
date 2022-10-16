@@ -2,6 +2,7 @@
 #define INCLUDE_IDENTIFIER_H_
 
 #include <vector>
+#include <opencv2/opencv.hpp>
 using cv::Mat;
 using cv::Rect;
 
@@ -37,7 +38,7 @@ class Identifier{
         std::vector<int> class_ids;
         std::vector<double> class_confidence;
         std::vector<Rect> bounding_box;
-}
+};
 
 
 #endif // INCLUDE_IDENTIFIER_H_
