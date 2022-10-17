@@ -2,12 +2,12 @@
 #define INCLUDE_YOLO_DETECT_H_
 
 #include <vector>
-// #include <opencv2/dnn.hpp>
+#include <opencv2/dnn.hpp>
 #include <opencv2/opencv.hpp>
-// #include <opencv2/imgproc.hpp>
-// #include <opencv2/highgui.hpp>
+
 
 using cv::Mat;
+using cv::dnn::Net;
 
 /**
  * @brief this class containds methods and attributes for human detection
@@ -22,23 +22,27 @@ class YoloDetect{
         YoloDetect();
         
         /**
-         * @brief this method will detect humans in the given frame
+         * @brief this function forwards the blob to the model and gets the detection
          * 
-         * @param frame inout frame
-         * @return vector<Mat> frame with humans detected
+         * @param blob pre-processed image blob
+         * @param net object of opencv Net class
+         * @return std::vector<Mat> detections in the given frame
          */
-        std::vector<Mat> detectHuman(std::vector<Mat> frame);
+        std::vector<Mat> detectHuman(Mat blob, Net &net);
+
+        /**
+         * @brief this function takes input image and converts it to input size blob
+         * 
+         * @param input_frame input from either files or camera feed
+         * @return Mat image blob
+         */
+        Mat preProcess(Mat &input_frame);
 
         std::vector<Mat> input_frame;
         
 
     private:
-        /**
-         * @brief this method preprocess the input frame such as resize, etc.
-         * 
-         * @return vector<Mat> preprocessed frame for human detection
-         */
-        std::vector<Mat> preProcess();
+        static std::vector<int> input_size;
 };
 
 
