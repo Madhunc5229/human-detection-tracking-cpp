@@ -25,11 +25,7 @@ using cv::dnn::Net;
  */
 class YoloDetect{
  public:
-        /**
-         * @brief Construct a new Yolo Detect object
-         * 
-         */
-        YoloDetect();
+        
         /**
          * @brief this function forwards the blob to the model and gets the detection
          * 
