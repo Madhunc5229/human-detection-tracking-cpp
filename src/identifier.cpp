@@ -2,7 +2,7 @@
 
 
 using std::vector;
-
+std::vector<int> Identifier::input_size = {640, 640};
 
 int Identifier::drawIdentifier(Mat &input_image, std::vector<Mat> &outputs, std::vector<std::string> &class_name){
 
