@@ -18,7 +18,7 @@ class Identifier{
          * @brief Construct a new Identifier object
          * 
          */
-        Identifier();
+
 
         /**
          * @brief this function extracts the details for drawing a bounding box

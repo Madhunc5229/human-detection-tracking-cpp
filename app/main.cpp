@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include "../include/yoloDetect.h"
+#include "../include/identifier.h"
 
 /**
  * @brief starting point for the program
@@ -44,8 +45,8 @@ int main() {
 
   Mat frame_copy = frame.clone();
 
-  int human_count = identify.drawIdentifier(frame_copy, detections, class_list)
+  int human_count = identify.drawIdentifier(frame_copy, detections, class_list);
 
-  std::cout << "Number of Humans : " << count << "\n";
+  std::cout << "Number of Humans : " << human_count << "\n";
 
 }

@@ -32,7 +32,7 @@ int Identifier::drawIdentifier(Mat &input_image, std::vector<Mat> &outputs, std:
             double max_class_score;
             cv::minMaxLoc(scores, 0, &max_class_score, 0, &class_id);
 
-            if (class_id.x ==1){
+            if (class_id.x ==0){
               count ++;
             }
         }
