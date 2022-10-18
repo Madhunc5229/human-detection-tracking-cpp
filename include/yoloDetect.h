@@ -47,8 +47,6 @@ class YoloDetect{
 
        int process(Mat &input_image, std::vector<Mat> &outputs, std::vector<std::string> &class_name);
 
- private:
-       static std::vector<int> input_size;
        
 };
 

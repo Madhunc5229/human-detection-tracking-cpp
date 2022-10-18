@@ -41,6 +41,7 @@ class Identifier{
         std::vector<int> class_ids;
         std::vector<double> class_confidence;
         std::vector<cv::Rect> bounding_box;
+        static std::vector<int> input_size;
 };
 
 
