@@ -28,6 +28,7 @@ int main() {
   frame = cv::imread("../data/test_image.jpg");
   Net net;
   YoloDetect yolo;
+  Identifier identify;
 
   // load the network
   net = cv::dnn::readNet("../yolov5s/yolov5s.onnx");
@@ -39,11 +40,11 @@ int main() {
   std::vector<Mat> detections;
 
   // get detections
-  detections = yolo.detectHuman(blob, net);
+  detections = yolo.detect(blob, net);
 
   Mat frame_copy = frame.clone();
 
-  int count = yolo.process(frame_copy, detections, class_list);
+  int human_count = identify.drawIdentifier(frame_copy, detections, class_list)
 
   std::cout << "Number of Humans : " << count << "\n";
 

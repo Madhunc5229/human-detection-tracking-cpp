@@ -33,7 +33,7 @@ class YoloDetect{
        * @param net object of opencv Net class
        * @return std::vector<Mat> detections in the given frame
        */
-       std::vector<Mat> detectHuman(Mat blob, Net &net);
+       std::vector<Mat> detect(Mat blob, Net &net);
 
        /**
        * @brief this function takes input image and converts it to input size blob
@@ -46,9 +46,6 @@ class YoloDetect{
        std::vector<Mat> input_frame;
 
        int process(Mat &input_image, std::vector<Mat> &outputs, std::vector<std::string> &class_name);
-
-       const float CONFIDENCE_THRESHOLD = 0.45;
-       const float SCORE_THRESHOLD = 0.5;
 
  private:
        static std::vector<int> input_size;

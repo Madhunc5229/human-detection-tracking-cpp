@@ -3,8 +3,10 @@
 
 #include <vector>
 #include <opencv2/opencv.hpp>
+#include <opencv2/dnn.hpp>
+
 using cv::Mat;
-using cv::Rect;
+using cv::dnn::Net;
 
 /**
  * @brief this class helps in identifying humans in a given frame
@@ -29,15 +31,16 @@ class Identifier{
          * 
          * @return std::vector<Mat> the modified frame
          */
-        std::vector<Mat> drawIdentifier();
-
-        std::vector<Mat> predicted_out;
+        int drawIdentifier(Mat &input_image, std::vector<Mat> &outputs, std::vector<std::string> &class_name);
         
+        std::vector<Mat> predicted_out;
+        const float CONFIDENCE_THRESHOLD = 0.45;
+        const float SCORE_THRESHOLD = 0.5;
 
     private:
         std::vector<int> class_ids;
         std::vector<double> class_confidence;
-        std::vector<Rect> bounding_box;
+        std::vector<cv::Rect> bounding_box;
 };
 
 
