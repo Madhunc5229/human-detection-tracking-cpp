@@ -1,5 +1,15 @@
-#ifndef INCLUDE_YOLO_DETECT_H_
-#define INCLUDE_YOLO_DETECT_H_
+/**
+ * @file yoloDetect.h
+ * @author your name (you@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-10-17
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+#ifndef INCLUDE_YOLODETECT_H_
+#define INCLUDE_YOLODETECT_H_
 
 #include <vector>
 #include <opencv2/dnn.hpp>
@@ -14,13 +24,12 @@ using cv::dnn::Net;
  * 
  */
 class YoloDetect{
-    public:
+ public:
         /**
          * @brief Construct a new Yolo Detect object
          * 
          */
         YoloDetect();
-        
         /**
          * @brief this function forwards the blob to the model and gets the detection
          * 
@@ -39,12 +48,9 @@ class YoloDetect{
         Mat preProcess(Mat &input_frame);
 
         std::vector<Mat> input_frame;
-        
 
-    private:
+ private:
         static std::vector<int> input_size;
 };
 
-
-
-#endif // INCLUDE_YOLO_DETECT_H_
+#endif  // INCLUDE_YOLODETECT_H_
