@@ -19,6 +19,10 @@
  * @return int
  */
 int main() {
+
+  std::vector<std::string> class_list;
+  class_list.push_back("person");
+
   Mat frame;
   // read the test image
   frame = cv::imread("../data/test_image.jpg");
@@ -36,4 +40,11 @@ int main() {
 
   // get detections
   detections = yolo.detectHuman(blob, net);
+
+  Mat frame_copy = frame.clone();
+
+  int count = yolo.process(frame_copy, detections, class_list);
+
+  std::cout << "Number of Humans : " << count << "\n";
+
 }
