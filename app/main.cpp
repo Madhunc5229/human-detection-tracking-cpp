@@ -31,7 +31,7 @@ int main() {
   Identifier identify;
 
   // load the network
-  net = cv::dnn::readNet("../yolov5s/yolov5s.onnx");
+  net = cv::dnn::readNetFromONNX("../yolov5s/yolov5s.onnx");
 
   Mat blob;
   // Pre-Process the image.
