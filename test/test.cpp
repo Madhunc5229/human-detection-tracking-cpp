@@ -13,9 +13,9 @@
 #include "../include/yoloDetect.h"
 
 // read the test image
-Mat test_frame = cv::imread("../data/test_image.jpg");
+Mat test_frame = cv::imread("data/test_image.jpg");
 // read the network
-Net test_net = cv::dnn::readNet("../yolov5s/yolov5s.onnx");
+Net test_net = cv::dnn::readNet("yolov5s/yolov5s.onnx");
 YoloDetect test;
 /**
  * @brief Test 1 checks if the blobs dimension is (1,3,640,640)
