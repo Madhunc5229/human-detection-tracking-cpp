@@ -1,7 +1,19 @@
+/**
+ * @file identifier.h
+ * @author Madhu Narra Chittibabu (madhunc117@gmail.com)
+ * @navigator Sharmitha Ganesan (sharmithaganesan08@gmail.com)
+ * @brief declaration of identifier class 
+ * @version 0.1
+ * @date 2022-10-19
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #ifndef INCLUDE_IDENTIFIER_H_
 #define INCLUDE_IDENTIFIER_H_
 
 #include <vector>
+#include <string>
 #include <opencv2/opencv.hpp>
 #include <opencv2/dnn.hpp>
 
@@ -13,13 +25,13 @@ using cv::dnn::Net;
  * 
  */
 class Identifier{
-    public:
+ public:
         /**
          * @brief Construct a new Identifier object
          * 
          */
 
-
+        Identifier() {}
         /**
          * @brief this function extracts the details for drawing a bounding box
          * 
@@ -31,18 +43,15 @@ class Identifier{
          * 
          * @return std::vector<Mat> the modified frame
          */
-        int drawIdentifier(Mat &input_image, std::vector<Mat> &outputs, std::vector<std::string> &class_name);
-        
+        int drawIdentifier(Mat &input_image, std::vector<Mat> &outputs, std::vector<std::string> &class_name);  // NOLINT
         std::vector<Mat> predicted_out;
         const float CONFIDENCE_THRESHOLD = 0.45;
         const float SCORE_THRESHOLD = 0.5;
 
-    private:
+ private:
         std::vector<int> class_ids;
         std::vector<double> class_confidence;
         std::vector<cv::Rect> bounding_box;
         static std::vector<int> input_size;
 };
-
-
-#endif // INCLUDE_IDENTIFIER_H_
+#endif  // INCLUDE_IDENTIFIER_H_

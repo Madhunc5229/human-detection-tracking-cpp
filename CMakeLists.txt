@@ -13,8 +13,8 @@ option(COVERAGE "Generate Coverage Data" OFF)
 
 if (COVERAGE)
     include(CodeCoverage)
-    set(LCOV_REMOVE_EXTRA "'vendor/*'")
-    # setup_target_for_coverage(code_coverage test/cpp-test coverage)
+    set(LCOV_REMOVE_EXTRA "'*vendor/*'")
+    setup_target_for_coverage(code_coverage test/cpp-test coverage)
     set(COVERAGE_SRCS app/main.cpp )
 
     SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
@@ -29,5 +29,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(app)
 add_subdirectory(src)
-# add_subdirectory(test)
-# add_subdirectory(vendor/googletest/googletest)
+add_subdirectory(test)
+add_subdirectory(vendor/googletest/googletest)

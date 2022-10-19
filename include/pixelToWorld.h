@@ -1,5 +1,16 @@
-#ifndef INCLUDE_PIXEL_TO_WORLD_H_
-#define INCLUDE_PIXEL_TO_WORLD_H_
+/**
+ * @file pixelToWorld.h
+ * @author Madhu Narra Chittibabu (madhunc117@gmail.com)
+ * @navigator Sharmitha Ganesan (sharmithaganesan08@gmail.com)
+ * @brief Declaration of pixelToWorld class
+ * @version 0.1
+ * @date 2022-10-19
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+#ifndef INCLUDE_PIXELTOWORLD_H_
+#define INCLUDE_PIXELTOWORLD_H_
 
 #include <vector>
 #include <opencv2/opencv.hpp>
@@ -7,14 +18,10 @@ using cv::Mat;
 
 
 class PixelToWorld{
-    public:
-        
+ public:
         PixelToWorld();
-        
         std::vector<int> pixelValues;
-        
-
-    private:
+ private:
         /**
          * @brief computes the projection matrix to compute XYZ
          * 
@@ -29,10 +36,6 @@ class PixelToWorld{
          * @return vector<Mat> XYZ co-ordinates
          */
         std::vector<Mat> worldPoints(std::vector<Mat> tramsformaMatrix);
-        
         double focalLength;
 };
-
-
-
-#endif // INCLUDE_PIXEL_TO_WORLD_H_
+#endif  // INCLUDE_PIXELTOWORLD_H_

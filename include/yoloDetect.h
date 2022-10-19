@@ -1,7 +1,8 @@
 /**
  * @file yoloDetect.h
- * @author your name (you@domain.com)
- * @brief 
+ * @author Madhu Narra Chittibabu (madhunc117@gmail.com)
+ * @navigator Sharmitha Ganesan (sharmithaganesan08@gmail.com)
+ * @brief Declaration of yoloDetect class
  * @version 0.1
  * @date 2022-10-17
  * 
@@ -25,7 +26,11 @@ using cv::dnn::Net;
  */
 class YoloDetect{
  public:
-        
+      /**
+      * @brief Construct a new Yolo Detect object
+      * 
+      */
+      YoloDetect() {}
        /**
        * @brief this function forwards the blob to the model and gets the detection
        * 
@@ -33,7 +38,7 @@ class YoloDetect{
        * @param net object of opencv Net class
        * @return std::vector<Mat> detections in the given frame
        */
-       std::vector<Mat> detect(Mat blob, Net &net);
+       std::vector<Mat> detect(Mat blob, Net &net);  // NOLINT
 
        /**
        * @brief this function takes input image and converts it to input size blob
@@ -41,15 +46,12 @@ class YoloDetect{
        * @param input_frame input from either files or camera feed
        * @return Mat image blob
        */
-       Mat preProcess(Mat &input_frame);
+       Mat preProcess( Mat &input_frame);  // NOLINT
 
        std::vector<Mat> input_frame;
 
-       int process(Mat &input_image, std::vector<Mat> &outputs, std::vector<std::string> &class_name);
-
  private:
        static std::vector<int> input_size;
-       
 };
 
 #endif  // INCLUDE_YOLODETECT_H_

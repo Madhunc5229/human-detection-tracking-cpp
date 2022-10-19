@@ -20,7 +20,6 @@
  * @return int
  */
 int main() {
-
   std::vector<std::string> class_list;
   class_list.push_back("person");
 
@@ -37,16 +36,14 @@ int main() {
   Mat blob;
   // Pre-Process the image.
   blob = yolo.preProcess(frame);
-
   std::vector<Mat> detections;
 
   // get detections
   detections = yolo.detect(blob, net);
-
+  std::cout << detections[0].size;
   Mat frame_copy = frame.clone();
 
   int human_count = identify.drawIdentifier(frame_copy, detections, class_list);
-
+  // Number of humans befoe non maximum suppression
   std::cout << "Number of Humans : " << human_count << "\n";
-
 }
