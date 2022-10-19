@@ -39,7 +39,7 @@ jobs:
 
       # Run CMake to setup compilation flags
       - name: Configure Coverage CMake 
-        run: cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../ ${{github.workspace}}/build 
+        run: cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug -B ${{github.workspace}}/build 
       
       # Compile and executables
       - name: Build Coverage
