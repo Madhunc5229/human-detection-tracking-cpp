@@ -1,0 +1,113 @@
+\hypertarget{classYoloDetect}{}\doxysection{Yolo\+Detect Class Reference}
+\label{classYoloDetect}\index{YoloDetect@{YoloDetect}}
+
+
+this class containds methods and attributes for human detection  
+
+
+
+
+{\ttfamily \#include $<$yolo\+Detect.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classYoloDetect_a18054f45deb3bfcdd98b11324139ff1d}{Yolo\+Detect}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Yolo Detect object. \end{DoxyCompactList}\item 
+std\+::vector$<$ Mat $>$ \mbox{\hyperlink{classYoloDetect_a1f494d18c35a602f2e98ba193bec82bc}{detect}} (Mat blob, Net \&net)
+\begin{DoxyCompactList}\small\item\em this function forwards the blob to the model and gets the detection \end{DoxyCompactList}\item 
+Mat \mbox{\hyperlink{classYoloDetect_aa2c31ff2575704095b76261fbd3d7ca3}{pre\+Process}} (Mat \&input\+\_\+frame)
+\begin{DoxyCompactList}\small\item\em this function takes input image and converts it to input size blob \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classYoloDetect_a2f2a01a7659e1aadfe6399ef7009780e}\label{classYoloDetect_a2f2a01a7659e1aadfe6399ef7009780e}} 
+std\+::vector$<$ Mat $>$ {\bfseries input\+\_\+frame}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+this class containds methods and attributes for human detection 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classYoloDetect_a18054f45deb3bfcdd98b11324139ff1d}\label{classYoloDetect_a18054f45deb3bfcdd98b11324139ff1d}} 
+\index{YoloDetect@{YoloDetect}!YoloDetect@{YoloDetect}}
+\index{YoloDetect@{YoloDetect}!YoloDetect@{YoloDetect}}
+\doxysubsubsection{\texorpdfstring{YoloDetect()}{YoloDetect()}}
+{\footnotesize\ttfamily Yolo\+Detect\+::\+Yolo\+Detect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new Yolo Detect object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classYoloDetect_a1f494d18c35a602f2e98ba193bec82bc}\label{classYoloDetect_a1f494d18c35a602f2e98ba193bec82bc}} 
+\index{YoloDetect@{YoloDetect}!detect@{detect}}
+\index{detect@{detect}!YoloDetect@{YoloDetect}}
+\doxysubsubsection{\texorpdfstring{detect()}{detect()}}
+{\footnotesize\ttfamily std\+::vector$<$ Mat $>$ Yolo\+Detect\+::detect (\begin{DoxyParamCaption}\item[{Mat}]{blob,  }\item[{Net \&}]{net }\end{DoxyParamCaption})}
+
+
+
+this function forwards the blob to the model and gets the detection 
+
+returns the predicted weights
+
+
+\begin{DoxyParams}{Parameters}
+{\em blob} & pre-\/processed image blob \\
+\hline
+{\em net} & object of opencv Net class \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Mat$>$ detections in the given frame
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em blob} & \\
+\hline
+{\em net} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Mat$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classYoloDetect_aa2c31ff2575704095b76261fbd3d7ca3}\label{classYoloDetect_aa2c31ff2575704095b76261fbd3d7ca3}} 
+\index{YoloDetect@{YoloDetect}!preProcess@{preProcess}}
+\index{preProcess@{preProcess}!YoloDetect@{YoloDetect}}
+\doxysubsubsection{\texorpdfstring{preProcess()}{preProcess()}}
+{\footnotesize\ttfamily Mat Yolo\+Detect\+::pre\+Process (\begin{DoxyParamCaption}\item[{Mat \&}]{input\+\_\+frame }\end{DoxyParamCaption})}
+
+
+
+this function takes input image and converts it to input size blob 
+
+Converts input frame into blob.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+frame} & input from either files or camera feed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat image blob
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+frame} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mat 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{yoloDetect_8h}{yolo\+Detect.\+h}}\item 
+src/\mbox{\hyperlink{yoloDetect_8cpp}{yolo\+Detect.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,96 @@
+\hypertarget{classIdentifier}{}\doxysection{Identifier Class Reference}
+\label{classIdentifier}\index{Identifier@{Identifier}}
+
+
+this class helps in identifying humans in a given frame  
+
+
+
+
+{\ttfamily \#include $<$identifier.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIdentifier_aad50fbe15d6f8ef43e9a38b1184209c1}{Identifier}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classIdentifier}{Identifier}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIdentifier_ad49154ab081382544ea56b83c310f704}{unwrap\+Prediction}} ()
+\begin{DoxyCompactList}\small\item\em this function extracts the details for drawing a bounding box \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIdentifier_a39fd48f065d6e5ed8286beb06e5083e3}{draw\+Identifier}} (std\+::vector$<$ Mat $>$ \&outputs, std\+::vector$<$ std\+::string $>$ \&class\+\_\+name)
+\begin{DoxyCompactList}\small\item\em this method draws the identifier on the frame \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIdentifier_a5bcff6afb0e85bc0218504df8079dab6}\label{classIdentifier_a5bcff6afb0e85bc0218504df8079dab6}} 
+std\+::vector$<$ Mat $>$ {\bfseries predicted\+\_\+out}
+\item 
+\mbox{\Hypertarget{classIdentifier_a2f1121a2f73a6756bef3bccdbcec84d8}\label{classIdentifier_a2f1121a2f73a6756bef3bccdbcec84d8}} 
+const float {\bfseries C\+O\+N\+F\+I\+D\+E\+N\+C\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD} = 0.\+45
+\item 
+\mbox{\Hypertarget{classIdentifier_ab5d19c53e691d6c07750a33eb533285f}\label{classIdentifier_ab5d19c53e691d6c07750a33eb533285f}} 
+const float {\bfseries S\+C\+O\+R\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD} = 0.\+5
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+this class helps in identifying humans in a given frame 
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIdentifier_aad50fbe15d6f8ef43e9a38b1184209c1}\label{classIdentifier_aad50fbe15d6f8ef43e9a38b1184209c1}} 
+\index{Identifier@{Identifier}!Identifier@{Identifier}}
+\index{Identifier@{Identifier}!Identifier@{Identifier}}
+\doxysubsubsection{\texorpdfstring{Identifier()}{Identifier()}}
+{\footnotesize\ttfamily Identifier\+::\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a new \mbox{\hyperlink{classIdentifier}{Identifier}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIdentifier_a39fd48f065d6e5ed8286beb06e5083e3}\label{classIdentifier_a39fd48f065d6e5ed8286beb06e5083e3}} 
+\index{Identifier@{Identifier}!drawIdentifier@{drawIdentifier}}
+\index{drawIdentifier@{drawIdentifier}!Identifier@{Identifier}}
+\doxysubsubsection{\texorpdfstring{drawIdentifier()}{drawIdentifier()}}
+{\footnotesize\ttfamily int Identifier\+::draw\+Identifier (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Mat $>$ \&}]{outputs,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{class\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+this method draws the identifier on the frame 
+
+In Sprint 1, this method returns the number of detected humans before non-\/max suppression.
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Mat$>$ the modified frame
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+image} & \\
+\hline
+{\em outputs} & \\
+\hline
+{\em class\+\_\+name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIdentifier_ad49154ab081382544ea56b83c310f704}\label{classIdentifier_ad49154ab081382544ea56b83c310f704}} 
+\index{Identifier@{Identifier}!unwrapPrediction@{unwrapPrediction}}
+\index{unwrapPrediction@{unwrapPrediction}!Identifier@{Identifier}}
+\doxysubsubsection{\texorpdfstring{unwrapPrediction()}{unwrapPrediction()}}
+{\footnotesize\ttfamily void Identifier\+::unwrap\+Prediction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+this function extracts the details for drawing a bounding box 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{identifier_8h}{identifier.\+h}}\item 
+src/\mbox{\hyperlink{identifier_8cpp}{identifier.\+cpp}}\end{DoxyCompactItemize}
