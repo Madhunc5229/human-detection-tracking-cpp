@@ -22,8 +22,7 @@ std::vector<int> Identifier::input_size = {640, 640};
  * @param class_name 
  * @return int 
  */
-int Identifier::drawIdentifier(Mat &input_image, std::vector<Mat> &outputs,
-std::vector<std::string> &class_name) {
+int Identifier::drawIdentifier(std::vector<Mat> &outputs, std::vector<std::string> &class_name) {
     // Initialize vectors to hold outputs while unwrapping detections.
     vector<int> class_ids;
     vector<float> confidences;

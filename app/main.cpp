@@ -40,10 +40,8 @@ int main() {
 
   // get detections
   detections = yolo.detect(blob, net);
-  std::cout << detections[0].size;
-  Mat frame_copy = frame.clone();
 
-  int human_count = identify.drawIdentifier(frame_copy, detections, class_list);
+  int human_count = identify.drawIdentifier(detections, class_list);
   // Number of humans befoe non maximum suppression
   std::cout << "Number of Humans : " << human_count << "\n";
 }

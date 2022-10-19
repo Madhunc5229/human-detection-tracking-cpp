@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/home/sharmitha/human-detection-tracking-cpp/build/app",
+  "command": "/usr/bin/c++   -I/home/sharmitha/human-detection-tracking-cpp/include -isystem /usr/local/include/opencv4  -g -O0 -fprofile-arcs -ftest-coverage -g   -std=gnu++14 -o CMakeFiles/myApp.dir/main.cpp.o -c /home/sharmitha/human-detection-tracking-cpp/app/main.cpp",
+  "file": "/home/sharmitha/human-detection-tracking-cpp/app/main.cpp"
+},
+{
+  "directory": "/home/sharmitha/human-detection-tracking-cpp/build/src",
+  "command": "/usr/bin/c++   -I/usr/local/include/opencv4 -I/home/sharmitha/human-detection-tracking-cpp/include  -g -O0 -fprofile-arcs -ftest-coverage -g   -std=gnu++14 -o CMakeFiles/myLib.dir/yoloDetect.cpp.o -c /home/sharmitha/human-detection-tracking-cpp/src/yoloDetect.cpp",
+  "file": "/home/sharmitha/human-detection-tracking-cpp/src/yoloDetect.cpp"
+},
+{
+  "directory": "/home/sharmitha/human-detection-tracking-cpp/build/src",
+  "command": "/usr/bin/c++   -I/usr/local/include/opencv4 -I/home/sharmitha/human-detection-tracking-cpp/include  -g -O0 -fprofile-arcs -ftest-coverage -g   -std=gnu++14 -o CMakeFiles/myLib.dir/identifier.cpp.o -c /home/sharmitha/human-detection-tracking-cpp/src/identifier.cpp",
+  "file": "/home/sharmitha/human-detection-tracking-cpp/src/identifier.cpp"
+},
+{
+  "directory": "/home/sharmitha/human-detection-tracking-cpp/build/test",
+  "command": "/usr/bin/c++   -I/home/sharmitha/human-detection-tracking-cpp/test/../vendor/googletest/googletest/include -I/home/sharmitha/human-detection-tracking-cpp/include -I/home/sharmitha/human-detection-tracking-cpp/vendor/googletest/googletest/include -isystem /usr/local/include/opencv4  -g -O0 -fprofile-arcs -ftest-coverage -g   -std=gnu++14 -o CMakeFiles/cpp-test.dir/main.cpp.o -c /home/sharmitha/human-detection-tracking-cpp/test/main.cpp",
+  "file": "/home/sharmitha/human-detection-tracking-cpp/test/main.cpp"
+},
+{
+  "directory": "/home/sharmitha/human-detection-tracking-cpp/build/test",
+  "command": "/usr/bin/c++   -I/home/sharmitha/human-detection-tracking-cpp/test/../vendor/googletest/googletest/include -I/home/sharmitha/human-detection-tracking-cpp/include -I/home/sharmitha/human-detection-tracking-cpp/vendor/googletest/googletest/include -isystem /usr/local/include/opencv4  -g -O0 -fprofile-arcs -ftest-coverage -g   -std=gnu++14 -o CMakeFiles/cpp-test.dir/test.cpp.o -c /home/sharmitha/human-detection-tracking-cpp/test/test.cpp",
+  "file": "/home/sharmitha/human-detection-tracking-cpp/test/test.cpp"
+},
+{
+  "directory": "/home/sharmitha/human-detection-tracking-cpp/build/vendor/googletest/googletest",
+  "command": "/usr/bin/c++   -I/usr/local/include/opencv4 -I/home/sharmitha/human-detection-tracking-cpp/vendor/googletest/googletest/include -I/home/sharmitha/human-detection-tracking-cpp/vendor/googletest/googletest  -g -O0 -fprofile-arcs -ftest-coverage -g   -g -O0 -fprofile-arcs -ftest-coverage -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++14 -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/sharmitha/human-detection-tracking-cpp/vendor/googletest/googletest/src/gtest_main.cc",
+  "file": "/home/sharmitha/human-detection-tracking-cpp/vendor/googletest/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "/home/sharmitha/human-detection-tracking-cpp/build/vendor/googletest/googletest",
+  "command": "/usr/bin/c++   -I/usr/local/include/opencv4 -I/home/sharmitha/human-detection-tracking-cpp/vendor/googletest/googletest/include -I/home/sharmitha/human-detection-tracking-cpp/vendor/googletest/googletest  -g -O0 -fprofile-arcs -ftest-coverage -g   -g -O0 -fprofile-arcs -ftest-coverage -Wall -Wshadow -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=gnu++14 -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/sharmitha/human-detection-tracking-cpp/vendor/googletest/googletest/src/gtest-all.cc",
+  "file": "/home/sharmitha/human-detection-tracking-cpp/vendor/googletest/googletest/src/gtest-all.cc"
+}
+]

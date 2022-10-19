@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmyLib.a  CMakeFiles/myLib.dir/yoloDetect.cpp.o CMakeFiles/myLib.dir/identifier.cpp.o
+/usr/bin/ranlib libmyLib.a

@@ -43,7 +43,7 @@ class Identifier {
          * 
          * @return std::vector<Mat> the modified frame
          */
-        int drawIdentifier(Mat &input_image, std::vector<Mat> &outputs, std::vector<std::string> &class_name);  // NOLINT
+        int drawIdentifier(std::vector<Mat> &outputs, std::vector<std::string> &class_name);  // NOLINT
         std::vector<Mat> predicted_out;
         const float CONFIDENCE_THRESHOLD = 0.45;
         const float SCORE_THRESHOLD = 0.5;
