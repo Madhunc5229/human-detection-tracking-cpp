@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2.1)
 project (hDetect)
 
-#FIND_PACKAGE(OpenCV REQUIRED)
+FIND_PACKAGE(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
