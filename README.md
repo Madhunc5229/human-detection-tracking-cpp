@@ -1,4 +1,5 @@
-[![Build Status](https://app.travis-ci.com/Madhunc5229/human-detection-tracking-cpp.svg?branch=main)](https://app.travis-ci.com/Madhunc5229/human-detection-tracking-cpp)  [![Coverage Status](https://coveralls.io/repos/github/Madhunc5229/human-detection-tracking-cpp/badge.svg?branch=main)](https://coveralls.io/github/Madhunc5229/human-detection-tracking-cpp?branch=main)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![Coverage Status](https://coveralls.io/repos/github/Madhunc5229/human-detection-tracking-cpp/badge.svg?branch=main)](https://coveralls.io/github/Madhunc5229/human-detection-tracking-cpp?branch=main)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # human-detection-and-tracking-cpp
 This project is designed and programmed to detect and track humans which will provide the location of the humans in a robot's frame of reference.
 Agile Iterative Process is used for the development of this project consisting of two sprints.  
