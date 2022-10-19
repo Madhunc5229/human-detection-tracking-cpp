@@ -34,7 +34,37 @@ Continuous integration is tracked by using Travis CI and code coverage is tracke
 ## System Design and Architecture 
 The following shows the activity diagram for our proposed design : 
 
-![image](https://user-images.githubusercontent.com/90351952/194469507-a9dfbb5f-3e2f-4e71-a1e3-85f28d3e94c5.png)  
+![image](https://user-images.githubusercontent.com/90351952/194469507-a9dfbb5f-3e2f-4e71-a1e3-85f28d3e94c5.png)
+
+## Build and Running Instructions
+```
+    git clone https://github.com/Madhunc5229/human-detection-tracking-cpp.git
+    mkdir build && cd build
+    cmake .. 
+    make
+
+    <!-- Run app -->
+    ./app/pid
+
+    <!-- Run tests -->
+    ./test/cpp-test
+```
+
+## Building for code coverage 
+```
+sudo apt-get install lcov
+cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
+make
+make code_coverage
+```
+This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
+
+## Run and save cpplint and cppcheck
+```
+cpplint $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/") $( find . -name *.h | grep -vE -e "^./build/" -e "^./vendor/") > cpplint.txt
+
+cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" ) > cppcheck.txt
+```
 
 UML class diagram:  
 
