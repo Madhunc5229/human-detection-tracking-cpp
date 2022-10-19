@@ -27,7 +27,7 @@ class PixelToWorld {
          * 
          * @return vector<Mat> return the projection matrix
          */
-        std::vector<Mat> transformationMat();
+        std::vector<double> transformationMat();
 
         /**
          * @brief calculate the world co-ordinates
@@ -35,7 +35,7 @@ class PixelToWorld {
          * @param tramsformaMatrix projection matrix
          * @return vector<Mat> XYZ co-ordinates
          */
-        std::vector<Mat> worldPoints(std::vector<Mat> tramsformaMatrix);
+        std::vector<int> worldPoints(std::vector<double> tramsformaMatrix);
         double focalLength;
 };
 #endif  // INCLUDE_PIXELTOWORLD_H_
