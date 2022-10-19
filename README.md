@@ -44,7 +44,7 @@ The following shows the activity diagram for our proposed design :
     make
 
     <!-- Run app -->
-    ./app/pid
+    ./app/myApp
 
     <!-- Run tests -->
     ./test/cpp-test
@@ -63,7 +63,7 @@ This generates a index.html page in the build/coverage sub-directory that can be
 ```
 cpplint $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/") $( find . -name *.h | grep -vE -e "^./build/" -e "^./vendor/") > cpplint.txt
 
-cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" ) > cppcheck.txt
+cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" ) $( find . -name *.h | grep -vE -e "^./build/" -e "^./vendor/") > cppcheck.txt
 ```
 
 UML class diagram:  
