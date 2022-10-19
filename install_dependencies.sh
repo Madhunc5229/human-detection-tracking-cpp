@@ -1,6 +1,6 @@
 # Install lcov for code coverage
 sudo apt-get install -y -qq lcov
-
+pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
 # OpenCV dependencies
 sudo apt update
 sudo apt upgrade
