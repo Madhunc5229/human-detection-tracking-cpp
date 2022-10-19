@@ -17,7 +17,7 @@
 using cv::Mat;
 
 
-class PixelToWorld{
+class PixelToWorld {
  public:
         PixelToWorld();
         std::vector<int> pixelValues;

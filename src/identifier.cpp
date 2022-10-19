@@ -22,17 +22,17 @@ std::vector<int> Identifier::input_size = {640, 640};
  * @param class_name 
  * @return int 
  */
-int Identifier::drawIdentifier(Mat &input_image, std::vector<Mat> &outputs, std::vector<std::string> &class_name) {
-
-    // Initialize vectors to hold respective outputs while unwrapping detections.
+int Identifier::drawIdentifier(Mat &input_image, std::vector<Mat> &outputs,
+std::vector<std::string> &class_name) {
+    // Initialize vectors to hold outputs while unwrapping detections.
     vector<int> class_ids;
     vector<float> confidences;
     // Resizing factor.
     int count = 0;
-    float x_factor = input_image.cols / input_size.at(0);
-    float y_factor = input_image.rows / input_size.at(1);
+    // float x_factor = input_image.cols / input_size.at(0);
+    // float y_factor = input_image.rows / input_size.at(1);
     float* data = (float* )outputs[0].data;  // NOLINT
-    const int dimensions = 85;
+    // const int dimensions = 85;
     // 25200 for default size 640.
     const int rows = 25200;
     // Iterate through 25200 detections.

@@ -24,7 +24,7 @@ using cv::dnn::Net;
  * @brief this class containds methods and attributes for human detection
  * 
  */
-class YoloDetect{
+class YoloDetect {
  public:
       /**
       * @brief Construct a new Yolo Detect object

@@ -24,7 +24,7 @@ using cv::dnn::Net;
  * @brief this class helps in identifying humans in a given frame
  * 
  */
-class Identifier{
+class Identifier {
  public:
         /**
          * @brief Construct a new Identifier object
