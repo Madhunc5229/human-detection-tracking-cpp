@@ -4,7 +4,7 @@ project (hDetect)
 
 # Add project cmake modules to path.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR}/cmake ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-
+set(OpenCV_DIR ${PROJECT_SOURCE_DIR}/cmake/)
 FIND_PACKAGE(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
