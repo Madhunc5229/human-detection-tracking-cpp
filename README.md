@@ -66,5 +66,7 @@ cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $(
 
 #### The Proposal for the project can be found [here](docs/Proposal.pdf)
 
-#### The video explanation of the phase zero of this project can be found [here](https://youtu.be/ooPpgImk9Js)
+#### The video explanation of the phase zero of this project can be found [here](https://youtu.be/ooPpgImk9Js)  
+
+#### The backlog tables for the project can be found [here](https://docs.google.com/spreadsheets/d/1CW_ieKRLy8_cIwrkX6DfmdFjv-0Q3DE-gBoVes4ktLM/edit?usp=sharing)
 
