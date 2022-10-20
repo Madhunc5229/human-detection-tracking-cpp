@@ -70,3 +70,4 @@ cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $(
 
 #### The backlog tables for the project can be found [here](https://docs.google.com/spreadsheets/d/1CW_ieKRLy8_cIwrkX6DfmdFjv-0Q3DE-gBoVes4ktLM/edit?usp=sharing)
 
+#### The video explanation of the phase one (sprint 1) of this project can be found [here](https://youtu.be/8Kceow7mc1A)  
