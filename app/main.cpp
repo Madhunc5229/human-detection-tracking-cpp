@@ -25,13 +25,13 @@ int main() {
 
   Mat frame;
   // read the test image
-  frame = cv::imread("../data/test_image.jpg");
+  frame = cv::imread(" ../data/test_image.jpg");
   Net net;
   YoloDetect yolo;
   Identifier identify;
 
   // load the network
-  net = cv::dnn::readNet("../yolov5s/yolov5s.onnx");
+  net = cv::dnn::readNetFromONNX("../yolov5s/yolov5s.onnx");
 
   Mat blob;
   // Pre-Process the image.

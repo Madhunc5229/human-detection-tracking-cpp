@@ -16,7 +16,10 @@
 #include <opencv2/opencv.hpp>
 using cv::Mat;
 
-
+/**
+ * @brief This class converts the pixel cordinates from camera to robot's frame of reference
+ * 
+ */
 class PixelToWorld {
  public:
         PixelToWorld();
