@@ -1,6 +1,6 @@
 # Install lcov for code coverage
 sudo apt-get install -y -qq lcov
-python3 -m pip install tensorflow
+
 # OpenCV dependencies
 sudo apt update
 sudo apt upgrade
