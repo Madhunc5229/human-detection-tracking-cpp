@@ -1,6 +1,7 @@
 # Install lcov for code coverage
 sudo apt-get install -y -qq lcov
 
+
 # OpenCV dependencies
 sudo apt update
 sudo apt upgrade
@@ -17,5 +18,4 @@ cmake -D BUILD_TIFF=ON -D WITH_CUDA=OFF -D ENABLE_AVX=OFF -D WITH_OPENGL=OFF -D 
 sudo make -j4
 sudo make install
 sudo ldconfig
-
 echo "OpenCV installed."
