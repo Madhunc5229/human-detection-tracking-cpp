@@ -13,9 +13,9 @@
 #include "../include/yoloDetect.h"
 
 // read the test image
-Mat test_frame = cv::imread("../data/test_image.jpg");
+Mat test_frame = cv::imread("human-detection-tracking-cpp/data/test_image.jpg");
 // read the network
-Net test_net = cv::dnn::readNet("../yolov5s/yolov5s.onnx");
+Net test_net = cv::dnn::readNet("human-detection-tracking-cpp/yolov5s/yolov5s.onnx");
 
 YoloDetect test;
 /**
