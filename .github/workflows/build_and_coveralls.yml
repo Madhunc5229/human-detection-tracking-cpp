@@ -36,8 +36,8 @@ jobs:
       # Install some system pacakges
       - name: Install packages
         run: pip3 install --user cpp-coveralls
-      - name: yolo dependency
-        run: sudo chmod a+x yolo_dependency.sh && ./yolo_dependency.sh
+
+
       - name: OpenCV Dependencies
         run: sudo chmod a+x install_dependencies.sh && ./install_dependencies.sh
 
