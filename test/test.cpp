@@ -15,7 +15,7 @@
 // read the test image
 Mat test_frame = cv::imread("../data/test_image.jpg");
 // read the network
-
+Net test_net = cv::dnn::readNet("../yolov5s/yolov5s.onnx");
 
 YoloDetect test;
 /**
@@ -31,12 +31,20 @@ TEST(Test1, testPreProcess) {
   EXPECT_TRUE(arr[i] == (num[i]));
   }
 }
+
 /**
  * @brief Test 2 checks if the detections dimension is (1,25200,85)
-
  * 
  */
-
+TEST(Test2, testDetect) {
+  Mat test_blob = test.preProcess(test_frame);
+  auto detection = test.detect(test_blob, test_net);
+  auto num = detection[0].size;
+  int arr[3] = {1, 25200, 85};
+  for (int i = 0; i < 3; i++) {
+  EXPECT_TRUE(arr[i] == (num[i]));
+  }
+}
 
 
 
