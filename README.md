@@ -1,5 +1,5 @@
 
-[![Build](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml/badge.svg)](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml)
+[![Build](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml/badge.svg?branch=development)](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml)
 [![Coverage Status](https://coveralls.io/repos/github/Madhunc5229/human-detection-tracking-cpp/badge.svg?branch=development)](https://coveralls.io/github/Madhunc5229/human-detection-tracking-cpp?branch=development)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # human-detection-and-tracking-cpp
