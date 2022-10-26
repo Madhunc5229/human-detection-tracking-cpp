@@ -36,12 +36,10 @@ int main() {
   Mat blob;
   // Pre-Process the image.
   blob = yolo.preProcess(frame);
-  std::vector<Mat> detections;
-
+  std::vector<Mat> predictions;
   // get detections
-  detections = yolo.detect(blob, net);
-
-  int human_count = identify.drawIdentifier(detections, class_list);
+  predictions = yolo.detect(blob, net);
+  identify.drawIdentifier(frame, predictions, class_list);
   // Number of humans befoe non maximum suppression
-  std::cout << "Number of Humans : " << human_count << "\n";
+  //std::cout << "Number of Humans : " << human_count << "\n";
 }
