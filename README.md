@@ -1,6 +1,6 @@
 
-[![Build](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml/badge.svg?branch=development)](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml)
-[![Coverage Status](https://coveralls.io/repos/github/Madhunc5229/human-detection-tracking-cpp/badge.svg?branch=development)](https://coveralls.io/github/Madhunc5229/human-detection-tracking-cpp?branch=development)
+[![Build](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml/badge.svg?branch=development_phase2)](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml)
+[![Coverage Status](https://coveralls.io/repos/github/Madhunc5229/human-detection-tracking-cpp/badge.svg?branch=development_phase2)](https://coveralls.io/github/Madhunc5229/human-detection-tracking-cpp?branch=development_phase2)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # human-detection-and-tracking-cpp
 This project is designed and programmed to detect and track humans which will provide the location of the humans in a robot's frame of reference.
