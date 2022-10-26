@@ -40,6 +40,5 @@ int main() {
   // get detections
   predictions = yolo.detect(blob, net);
   identify.drawIdentifier(frame, predictions, class_list);
-  // Number of humans befoe non maximum suppression
-  //std::cout << "Number of Humans : " << human_count << "\n";
+  
 }

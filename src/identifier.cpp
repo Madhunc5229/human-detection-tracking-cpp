@@ -13,7 +13,7 @@
 
 
 using std::vector;
-std::vector<int> Identifier::input_size = {640, 640};
+std::vector<float> Identifier::input_size = {640.0, 640.0};
 /**
  * @brief In Sprint 1, this method returns the number of detected humans before non-max suppression
  * 
@@ -75,18 +75,16 @@ void Identifier::drawIdentifier(const cv::Mat &input_image, std::vector<Mat> &pr
     }
     std::vector<int> nms_result;
     std::vector<Detection> output;
-    std::cout<<"before_nms"<<confidences.size()<<"\n";
     cv::dnn::NMSBoxes(boxes, confidences, SCORE_THRESHOLD, NMS_THRESHOLD, nms_result);
-    std::cout<<"nms"<<nms_result.size()<<"\n";
     for (int i = 0; i < nms_result.size(); i++) {
         int idx = nms_result[i];
         Detection result;
         result.class_id = class_ids[idx];
         result.confidence = confidences[idx];
         result.box = boxes[idx];
-        output.push_back(result);
+        output.push_back(result);}
     int no_detections = output.size();
-    std::cout<<"detections"<<no_detections<<"\n";
+    std::cout<<"detections "<<no_detections<<"\n";
     const std::vector<cv::Scalar> colors = {cv::Scalar(255, 255, 0), cv::Scalar(0, 255, 0), cv::Scalar(0, 255, 255), cv::Scalar(255, 0, 0)};
         for (int i = 0; i < no_detections; ++i) {
             auto detection = output[i];
@@ -95,9 +93,10 @@ void Identifier::drawIdentifier(const cv::Mat &input_image, std::vector<Mat> &pr
             const auto color = colors[classId % colors.size()];
             cv::rectangle(input_image, box, (color), 3);
             cv::rectangle(input_image, cv::Point(box.x, box.y - 20), cv::Point(box.x + box.width, box.y), color, cv::FILLED);
-            cv::putText(input_image, class_name[classId].c_str(), cv::Point(box.x, box.y - 5), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
+            cv::putText(input_image, (class_name[classId].c_str()+ std::to_string(i+1)), cv::Point(box.x, box.y - 5), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
         }
     cv::imshow("output",input_image);
     cv::waitKey(0);
-    }
+    
+    
 }
