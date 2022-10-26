@@ -38,8 +38,8 @@ Mat YoloDetect::preProcess(cv::Mat &input_frame) {
  */
 std::vector<Mat> YoloDetect::detect(Mat blob, Net &net) {
   net.setInput(blob);
-  std::vector<Mat> outputs;
-  // Run the forward pass to get output of the output layers.
-  net.forward(outputs, net.getUnconnectedOutLayersNames());
-  return outputs;
+  std::vector<Mat> predictions;
+  // Run the forward pass to get predicted weights of the output layers.
+  net.forward(predictions, net.getUnconnectedOutLayersNames());
+  return predictions;
 }
