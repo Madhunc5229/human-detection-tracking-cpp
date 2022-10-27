@@ -1,7 +1,7 @@
 /**
  * @file identifier.cpp
- * @author Madhu Narra Chittibabu (madhunc117@gmail.com)
- * @navigator Sharmitha Ganesan (sharmithaganesan08@gmail.com)
+ * @author Madhu Narra Chittibabu (madhunc117@gmail.com) (driver @ phase 1)
+ *         Sharmitha Ganesan (sharmithaganesan08@gmail.com) (driver @ phase 2)
  * @brief Implementation od identifier class
  * @version 0.1
  * @date 2022-10-19
@@ -13,7 +13,9 @@
 
 
 using std::vector;
+
 std::vector<float> Identifier::input_size = {640.0, 640.0};
+
 /**
  * @brief In Sprint 1, this method returns the number of detected humans before non-max suppression
  * 
@@ -76,7 +78,7 @@ std::vector<double> Identifier::drawIdentifier(const cv::Mat &input_image, std::
     std::vector<int> nms_result;
     std::vector<Detection> output;
     cv::dnn::NMSBoxes(boxes, confidences, SCORE_THRESHOLD, NMS_THRESHOLD, nms_result);
-    for (int i = 0; i < nms_result.size(); i++) {
+    for (int i = 0; i < static_cast<int>(nms_result.size()); i++) {
         int idx = nms_result[i];
         Detection result;
         result.class_id = class_ids[idx];

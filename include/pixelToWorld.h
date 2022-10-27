@@ -1,7 +1,7 @@
 /**
  * @file pixelToWorld.h
- * @author Madhu Narra Chittibabu (madhunc117@gmail.com)
- * @navigator Sharmitha Ganesan (sharmithaganesan08@gmail.com)
+ * @author Madhu Narra Chittibabu (madhunc117@gmail.com) (driver @ phase 1)
+ *         Sharmitha Ganesan (sharmithaganesan08@gmail.com) (driver @ phase 2)
  * @brief Declaration of pixelToWorld class
  * @version 0.1
  * @date 2022-10-19
