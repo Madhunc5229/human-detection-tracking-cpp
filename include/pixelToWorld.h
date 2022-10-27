@@ -39,6 +39,6 @@ class PixelToWorld {
          * @return vector<Mat> XYZ co-ordinates
          */
         std::vector<int> worldPoints(std::vector<double> tramsformaMatrix);
-        double focalLength;
+        static double focalLength;
 };
 #endif  // INCLUDE_PIXELTOWORLD_H_

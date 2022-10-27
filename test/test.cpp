@@ -58,13 +58,13 @@ TEST(Test2, testDetect) {
  * @brief Test 3 checks the number of detections in an image
  *
  */
-TEST(Test3, testNumOfDetections) {
+TEST(Test3, testNumOfDetections){
   std::vector<std::string> test_class_list;
   test_class_list.push_back("person");
   Mat test_blob = test.preProcess(test_frame);
   std::vector<Mat> detections;
   detections = test.detect(test_blob, test_net);
-  int test_num_of_humans =
+  std::vector<double> test_num_of_humans =
       test_identifier.drawIdentifier(test_frame, detections, test_class_list);
-  EXPECT_NEAR(9, test_num_of_humans, 3);
+  EXPECT_NEAR(9, test_num_of_humans.size()/2.0, 3);
 }

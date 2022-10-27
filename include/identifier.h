@@ -35,16 +35,13 @@ class Identifier {
          * 
          * @return std::vector<Mat> the modified frame
          */
-        int drawIdentifier(const cv::Mat &input_image,const std::vector<Mat> &predictions, std::vector<std::string> &class_name);  // NOLINT
+        std::vector<double> drawIdentifier(const cv::Mat &input_image,std::vector<Mat> &predictions, std::vector<std::string> &class_name);  // NOLINT
         std::vector<Mat> predicted_out;
         const float CONFIDENCE_THRESHOLD = 0.35;
         const float SCORE_THRESHOLD = 0.2;
         const float NMS_THRESHOLD = 0.2;
 
  private:
-        std::vector<int> class_ids;
-        std::vector<double> class_confidence;
-        std::vector<cv::Rect> bounding_box;
         static std::vector<float> input_size;
 };
 #endif  // INCLUDE_IDENTIFIER_H_
