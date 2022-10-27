@@ -22,7 +22,7 @@ std::vector<float> Identifier::input_size = {640.0, 640.0};
  * @param class_name 
  * @return int 
  */
-void Identifier::drawIdentifier(const cv::Mat &input_image, std::vector<Mat> &predictions, std::vector<std::string> &class_name) {
+std::vector<double> Identifier::drawIdentifier(const cv::Mat &input_image, std::vector<Mat> &predictions, std::vector<std::string> &class_name) {
     // Initialize vectors to hold outputs while unwrapping detections.
     vector<int> class_ids;
     vector<float> confidences;
@@ -85,18 +85,21 @@ void Identifier::drawIdentifier(const cv::Mat &input_image, std::vector<Mat> &pr
         output.push_back(result);}
     int no_detections = output.size();
     std::cout<<"detections "<<no_detections<<"\n";
+    std::vector<double> pixels;
     const std::vector<cv::Scalar> colors = {cv::Scalar(255, 255, 0), cv::Scalar(0, 255, 0), cv::Scalar(0, 255, 255), cv::Scalar(255, 0, 0)};
         for (int i = 0; i < no_detections; ++i) {
             auto detection = output[i];
             auto box = detection.box;
             auto classId = detection.class_id;
             const auto color = colors[classId % colors.size()];
+            pixels.push_back(box.x);
+            pixels.push_back(box.y);
             cv::rectangle(input_image, box, (color), 3);
             cv::rectangle(input_image, cv::Point(box.x, box.y - 20), cv::Point(box.x + box.width, box.y), color, cv::FILLED);
             cv::putText(input_image, (class_name[classId].c_str()+ std::to_string(i+1)), cv::Point(box.x, box.y - 5), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
         }
     cv::imshow("output",input_image);
     cv::waitKey(0);
-    
+    return pixels;
     
 }
