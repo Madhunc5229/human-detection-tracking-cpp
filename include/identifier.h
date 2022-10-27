@@ -1,7 +1,7 @@
 /**
  * @file identifier.h
- * @author Madhu Narra Chittibabu (madhunc117@gmail.com)
- * @navigator Sharmitha Ganesan (sharmithaganesan08@gmail.com)
+ * @author Madhu Narra Chittibabu (madhunc117@gmail.com) (driver @ phase 1)
+ *         Sharmitha Ganesan (sharmithaganesan08@gmail.com) (driver @ phase 2)
  * @brief declaration of identifier class 
  * @version 0.1
  * @date 2022-10-19
@@ -18,7 +18,6 @@
 #include <opencv2/dnn.hpp>
 
 using cv::Mat;
-using cv::dnn::Net;
 
 /**
  * @brief this class helps in identifying humans in a given frame
