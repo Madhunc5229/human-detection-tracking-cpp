@@ -11,8 +11,9 @@
  */
 
 #include <iostream>
-#include "../include/yoloDetect.h"
+
 #include "../include/identifier.h"
+#include "../include/yoloDetect.h"
 
 /**
  * @brief starting point for the program
@@ -37,8 +38,14 @@ int main() {
   // Pre-Process the image.
   blob = yolo.preProcess(frame);
   std::vector<Mat> predictions;
+
   // get detections
   predictions = yolo.detect(blob, net);
-  identify.drawIdentifier(frame, predictions, class_list);
-  
+
+  // Filter human detections and draw bounding box
+  int no_of_humans = identify.drawIdentifier(frame, predictions, class_list);
+
+  std::cout << "Number of Humans in the frame: " << no_of_humans << "\n";
+  cv::imshow("output", frame);
+  cv::waitKey(0);
 }

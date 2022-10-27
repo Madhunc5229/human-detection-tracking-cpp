@@ -29,14 +29,13 @@ class Identifier {
          * @brief Construct a new Identifier object
          * 
          */
-
         Identifier() {}
         /**
          * @brief this method draws the identifier on the frame
          * 
          * @return std::vector<Mat> the modified frame
          */
-        void drawIdentifier(const cv::Mat &input_image,std::vector<Mat> &predictions, std::vector<std::string> &class_name);  // NOLINT
+        int drawIdentifier(const cv::Mat &input_image,const std::vector<Mat> &predictions, std::vector<std::string> &class_name);  // NOLINT
         std::vector<Mat> predicted_out;
         const float CONFIDENCE_THRESHOLD = 0.35;
         const float SCORE_THRESHOLD = 0.2;
