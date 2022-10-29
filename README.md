@@ -1,6 +1,6 @@
-[![Build](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml/badge.svg?branch=main)](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml)
 
-[![Coverage Status](https://coveralls.io/repos/github/Madhuc5229/human-detection-tracking-cpp/badge.svg?branch=main)](https://coveralls.io/github/Madhuc5229/human-detection-tracking-cpp/?branch=main) 
+[![Build](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml/badge.svg?branch=development_phase2)](https://github.com/Madhunc5229/human-detection-tracking-cpp/actions/workflows/build_and_coveralls.yml)
+[![Coverage Status](https://coveralls.io/repos/github/Madhunc5229/human-detection-tracking-cpp/badge.svg?branch=development_phase2)](https://coveralls.io/github/Madhunc5229/human-detection-tracking-cpp?branch=development_phase2)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # human-detection-and-tracking-cpp
 This project is designed and programmed to detect and track humans which will provide the location of the humans in a robot's frame of reference.
@@ -67,8 +67,5 @@ cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $(
 
 #### The Proposal for the project can be found [here](docs/Proposal.pdf)
 
-#### The video explanation of the phase zero of this project can be found [here](https://youtu.be/ooPpgImk9Js)  
+#### The video explanation of the phase zero of this project can be found [here](https://youtu.be/ooPpgImk9Js)
 
-#### The backlog tables for the project can be found [here](https://docs.google.com/spreadsheets/d/1CW_ieKRLy8_cIwrkX6DfmdFjv-0Q3DE-gBoVes4ktLM/edit?usp=sharing)
-
-#### The video explanation of the phase one (sprint 1) of this project can be found [here](https://youtu.be/8Kceow7mc1A)  
