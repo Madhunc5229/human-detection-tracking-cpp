@@ -31,7 +31,7 @@ Our system is built using C++ and will employ the robust YOLOv5 neural network m
  - Cmake min 3.2.1  
  - Opencv [For installation](http://www.codebind.com/linux-tutorials/how-to-install-opencv-in-ubuntu-20-04-lts-for-c-c/)
 
-Continuous integration is tracked by using Travis CI and code coverage is tracked using coveralls. 
+Continuous integration and code coverage is tracked by using github workflows. 
 
 ## Build and Running Instructions
 ```
