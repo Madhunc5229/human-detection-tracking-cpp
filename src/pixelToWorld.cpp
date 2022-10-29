@@ -14,6 +14,7 @@ using Eigen::MatrixXf;
 using Eigen::Vector3f;
 using Eigen::Vector4f;
 
+// focal length of the camera
 double PixelToWorld::focalLength = 27.0;
 
 MatrixXf PixelToWorld::transformationMat() {
@@ -30,6 +31,7 @@ std::vector<double> PixelToWorld::worldPoints(MatrixXf T,
                                               std::vector<double> pixelValues) {
   std::vector<double> real_world;
   MatrixXf pseudo_T(4, 3);
+  // taking inverse of projection matirx
   pseudo_T = T.completeOrthogonalDecomposition().pseudoInverse();
   for (long unsigned int i = 0; i < pixelValues.size(); i = i + 2) {// NOLINT
     double u = pixelValues.at(i);
@@ -37,6 +39,7 @@ std::vector<double> PixelToWorld::worldPoints(MatrixXf T,
     Vector3f pixel_coord;
     pixel_coord << u, v, 1;
     Vector4f world_coord;
+    // transforming the pixel cordinates to real world
     world_coord = pseudo_T * pixel_coord;
     double x = world_coord[0] / world_coord[3];
     double y = world_coord[1] / world_coord[3];
