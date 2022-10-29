@@ -51,7 +51,7 @@ int main() {
   TM = world.transformationMat();
   std::vector<double> RW = world.worldPoints(TM, pixels);
   int count = 1;
-  for(int i =0;i<RW.size();i=i+3) {
+  for(long unsigned int i =0;i<RW.size();i=i+3) {
   std::cout<<"Person "<<count<<" world coordinates :" << RW.at(i)<<", "<<RW.at(i+1)<<", "<<RW.at(i+2)<<"\n";
   count ++;
   }

@@ -208,8 +208,8 @@ src/CMakeFiles/myLib.dir/clean:
 # Target rules for target test/CMakeFiles/cpp-test.dir
 
 # All Build rule for target.
-test/CMakeFiles/cpp-test.dir/all: src/CMakeFiles/myLib.dir/all
 test/CMakeFiles/cpp-test.dir/all: vendor/googletest/googletest/CMakeFiles/gtest.dir/all
+test/CMakeFiles/cpp-test.dir/all: src/CMakeFiles/myLib.dir/all
 	$(MAKE) -f test/CMakeFiles/cpp-test.dir/build.make test/CMakeFiles/cpp-test.dir/depend
 	$(MAKE) -f test/CMakeFiles/cpp-test.dir/build.make test/CMakeFiles/cpp-test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sharmitha/human-detection-tracking-cpp/build/CMakeFiles --progress-num=1,2,3 "Built target cpp-test"
