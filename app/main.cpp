@@ -46,8 +46,12 @@ int main() {
   std::cout << "Number of humans: " << pixels.size()/2.0<<"\n";
   MatrixXf TM(3,4);
   TM = world.transformationMat();
-  std::cout << "TM"<<TM<<"\n";
   std::vector<double> RW = world.worldPoints(TM, pixels);
-  std::cout<<"size 27?"<< RW.size();
-  
+  int count = 1;
+  for(int i =0;i<RW.size();i=i+3) {
+  std::cout<<"Person "<<count<<" world coordinates :" << RW.at(i)<<", "<<RW.at(i+1)<<", "<<RW.at(i+2)<<"\n";
+  count ++;
+  }
+  cv::imshow("after detection",frame);
+  cv::waitKey(0);
 }

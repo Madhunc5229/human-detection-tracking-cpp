@@ -38,7 +38,7 @@ jobs:
         run: pip3 install --user cpp-coveralls
 
 
-      - name: OpenCV Dependencies
+      - name: Eigen and OpenCV Dependencies
         run: sudo chmod a+x install_dependencies.sh && ./install_dependencies.sh
 
       # Run CMake to setup compilation flags

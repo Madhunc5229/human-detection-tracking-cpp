@@ -34,10 +34,8 @@ double u = pixelValues.at(i);
 double v = pixelValues.at(i+1);
 Vector3f pixel_coord;
 pixel_coord << u,v,1;
-std::cout<<"pixel"<<pixel_coord<<"\n";
 Vector4f world_coord;
 world_coord = pseudo_T * pixel_coord;
-std::cout<<"wprld 4x1 "<<world_coord<<"\n";
 double x = world_coord[0]/world_coord[3];
 double y = world_coord[1]/world_coord[3];
 double z = world_coord[2]/world_coord[3];
@@ -45,7 +43,6 @@ double z = world_coord[2]/world_coord[3];
 real_world.push_back(x);
 real_world.push_back(y);
 real_world.push_back(z);
-
 
 }
 return real_world;
