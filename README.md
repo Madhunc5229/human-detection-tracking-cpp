@@ -32,6 +32,8 @@ Our system is built using C++ and will employ the robust YOLOv5 neural network m
  - C++ 14++
  - Cmake min 3.2.1  
  - Opencv [For installation](http://www.codebind.com/linux-tutorials/how-to-install-opencv-in-ubuntu-20-04-lts-for-c-c/)
+ 
+ REFER TO THE INSTALL_DEPENDENCIES.SH FILE WHICH HAS THE COMMANDS REQUIRED FOR OUR API TO RUN.
 
 Continuous integration and code coverage is tracked by using github workflows. 
 
