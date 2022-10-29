@@ -67,6 +67,7 @@ cppcheck --enable=all --language=c++ --std=c++11 -I include/ --suppress=missingI
 
 #### The Proposal for the project can be found [here](assets/Proposal.pdf)
 
+#### The Backlog tables for the project can be found [here](https://docs.google.com/spreadsheets/d/1CW_ieKRLy8_cIwrkX6DfmdFjv-0Q3DE-gBoVes4ktLM/edit#gid=0)
 #### The video explanation of the phase zero of this project can be found [here](https://youtu.be/ooPpgImk9Js)
 
 #### The video explanation of the phase one of this project can be found [here](https://youtu.be/8Kceow7mc1A)
