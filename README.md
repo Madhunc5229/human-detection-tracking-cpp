@@ -63,9 +63,9 @@ cpplint $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/") $( find
 cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" ) $( find . -name *.h | grep -vE -e "^./build/" -e "^./vendor/") > cppcheck.txt
 ```
 
-#### The Quad Chart for the project can be found [here](docs/quad_chart.pdf)
+#### The Quad Chart for the project can be found [here](assets/quad_chart.pdf)
 
-#### The Proposal for the project can be found [here](docs/Proposal.pdf)
+#### The Proposal for the project can be found [here](assets/Proposal.pdf)
 
 #### The video explanation of the phase zero of this project can be found [here](https://youtu.be/ooPpgImk9Js)
 
