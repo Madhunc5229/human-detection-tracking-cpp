@@ -58,9 +58,9 @@ This generates a index.html page in the build/coverage sub-directory that can be
 
 ## Run and save cpplint and cppcheck
 ```
-cpplint $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/") $( find . -name *.h | grep -vE -e "^./build/" -e "^./vendor/") > cpplint.txt
+cpplint $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/") $( find . -name *.h | grep -vE -e "^./build/" -e "^./vendor/") > results/cpplint.txt
 
-cppcheck --enable=all --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" ) $( find . -name *.h | grep -vE -e "^./build/" -e "^./vendor/") > cppcheck.txt
+cppcheck --enable=all --language=c++ --std=c++11 -I include/ --suppress=missingIncludeSystem $( find . -name *.cpp | grep -vE -e "^./build/" -e "^./vendor/" ) $( find . -name *.h | grep -vE -e "^./build/" -e "^./vendor/") > results/cppcheck.txt
 ```
 
 #### The Quad Chart for the project can be found [here](docs/quad_chart.pdf)
