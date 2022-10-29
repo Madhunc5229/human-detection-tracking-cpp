@@ -14,9 +14,7 @@ this class helps in identifying humans in a given frame
 \item 
 \mbox{\hyperlink{classIdentifier_aad50fbe15d6f8ef43e9a38b1184209c1}{Identifier}} ()
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classIdentifier}{Identifier}} object. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classIdentifier_ad49154ab081382544ea56b83c310f704}{unwrap\+Prediction}} ()
-\begin{DoxyCompactList}\small\item\em this function extracts the details for drawing a bounding box \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classIdentifier_a39fd48f065d6e5ed8286beb06e5083e3}{draw\+Identifier}} (std\+::vector$<$ Mat $>$ \&outputs, std\+::vector$<$ std\+::string $>$ \&class\+\_\+name)
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classIdentifier_aeb037ddd714f8bbe755f3bb6855336b4}{draw\+Identifier}} (const cv\+::\+Mat \&input\+\_\+image, const std\+::vector$<$ Mat $>$ \&predictions, std\+::vector$<$ std\+::string $>$ \&class\+\_\+name)
 \begin{DoxyCompactList}\small\item\em this method draws the identifier on the frame \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -25,10 +23,13 @@ int \mbox{\hyperlink{classIdentifier_a39fd48f065d6e5ed8286beb06e5083e3}{draw\+Id
 std\+::vector$<$ Mat $>$ {\bfseries predicted\+\_\+out}
 \item 
 \mbox{\Hypertarget{classIdentifier_a2f1121a2f73a6756bef3bccdbcec84d8}\label{classIdentifier_a2f1121a2f73a6756bef3bccdbcec84d8}} 
-const float {\bfseries C\+O\+N\+F\+I\+D\+E\+N\+C\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD} = 0.\+45
+const float {\bfseries C\+O\+N\+F\+I\+D\+E\+N\+C\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD} = 0.\+35
 \item 
 \mbox{\Hypertarget{classIdentifier_ab5d19c53e691d6c07750a33eb533285f}\label{classIdentifier_ab5d19c53e691d6c07750a33eb533285f}} 
-const float {\bfseries S\+C\+O\+R\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD} = 0.\+5
+const float {\bfseries S\+C\+O\+R\+E\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD} = 0.\+2
+\item 
+\mbox{\Hypertarget{classIdentifier_aecb8e4f815e40c2cb8d6829afab43d24}\label{classIdentifier_aecb8e4f815e40c2cb8d6829afab43d24}} 
+const float {\bfseries N\+M\+S\+\_\+\+T\+H\+R\+E\+S\+H\+O\+LD} = 0.\+2
 \end{DoxyCompactItemize}
 
 
@@ -51,11 +52,11 @@ Construct a new \mbox{\hyperlink{classIdentifier}{Identifier}} object.
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classIdentifier_a39fd48f065d6e5ed8286beb06e5083e3}\label{classIdentifier_a39fd48f065d6e5ed8286beb06e5083e3}} 
+\mbox{\Hypertarget{classIdentifier_aeb037ddd714f8bbe755f3bb6855336b4}\label{classIdentifier_aeb037ddd714f8bbe755f3bb6855336b4}} 
 \index{Identifier@{Identifier}!drawIdentifier@{drawIdentifier}}
 \index{drawIdentifier@{drawIdentifier}!Identifier@{Identifier}}
 \doxysubsubsection{\texorpdfstring{drawIdentifier()}{drawIdentifier()}}
-{\footnotesize\ttfamily int Identifier\+::draw\+Identifier (\begin{DoxyParamCaption}\item[{std\+::vector$<$ Mat $>$ \&}]{outputs,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{class\+\_\+name }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Identifier\+::draw\+Identifier (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input\+\_\+image,  }\item[{const std\+::vector$<$ Mat $>$ \&}]{predictions,  }\item[{std\+::vector$<$ std\+::string $>$ \&}]{class\+\_\+name }\end{DoxyParamCaption})}
 
 
 
@@ -78,16 +79,6 @@ std\+::vector$<$\+Mat$>$ the modified frame
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classIdentifier_ad49154ab081382544ea56b83c310f704}\label{classIdentifier_ad49154ab081382544ea56b83c310f704}} 
-\index{Identifier@{Identifier}!unwrapPrediction@{unwrapPrediction}}
-\index{unwrapPrediction@{unwrapPrediction}!Identifier@{Identifier}}
-\doxysubsubsection{\texorpdfstring{unwrapPrediction()}{unwrapPrediction()}}
-{\footnotesize\ttfamily void Identifier\+::unwrap\+Prediction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-this function extracts the details for drawing a bounding box 
-
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

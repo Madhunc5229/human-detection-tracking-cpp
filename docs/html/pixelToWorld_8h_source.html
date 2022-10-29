@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Human Detection and Tracking
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
   </td>
  </tr>
@@ -74,24 +74,31 @@ $(function() {
 <a href="pixelToWorld_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef INCLUDE_PIXELTOWORLD_H_</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define INCLUDE_PIXELTOWORLD_H_</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> cv::Mat;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classPixelToWorld.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPixelToWorld.html">PixelToWorld</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classPixelToWorld.html">PixelToWorld</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        std::vector&lt;int&gt; pixelValues;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        std::vector&lt;double&gt; transformationMat();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        std::vector&lt;int&gt; worldPoints(std::vector&lt;double&gt; tramsformaMatrix);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">double</span> focalLength;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif  // INCLUDE_PIXELTOWORLD_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> Eigen::MatrixXf;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> cv::Mat;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classPixelToWorld.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPixelToWorld.html">PixelToWorld</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classPixelToWorld.html">PixelToWorld</a>() {}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  std::vector&lt;double&gt; pixelValues;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  MatrixXf <a class="code" href="classPixelToWorld.html#a8a1703f49efc733b83ea8a25bda04aad">transformationMat</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  std::vector&lt;double&gt; <a class="code" href="classPixelToWorld.html#a0cc36b65d69a291384dd0ba91c7d4a59">worldPoints</a>(MatrixXf T, std::vector&lt;double&gt; pixelValues);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">double</span> focalLength;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif  // INCLUDE_PIXELTOWORLD_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassPixelToWorld_html"><div class="ttname"><a href="classPixelToWorld.html">PixelToWorld</a></div><div class="ttdoc">This class converts the pixel cordinates from camera to robot's frame of reference.</div><div class="ttdef"><b>Definition:</b> pixelToWorld.h:23</div></div>
+<div class="ttc" id="aclassPixelToWorld_html_a8a1703f49efc733b83ea8a25bda04aad"><div class="ttname"><a href="classPixelToWorld.html#a8a1703f49efc733b83ea8a25bda04aad">PixelToWorld::transformationMat</a></div><div class="ttdeci">MatrixXf transformationMat()</div><div class="ttdoc">computes the projection matrix to compute XYZ</div><div class="ttdef"><b>Definition:</b> pixelToWorld.cpp:19</div></div>
+<div class="ttc" id="aclassPixelToWorld_html_a0cc36b65d69a291384dd0ba91c7d4a59"><div class="ttname"><a href="classPixelToWorld.html#a0cc36b65d69a291384dd0ba91c7d4a59">PixelToWorld::worldPoints</a></div><div class="ttdeci">std::vector&lt; double &gt; worldPoints(MatrixXf T, std::vector&lt; double &gt; pixelValues)</div><div class="ttdoc">calculate the world co-ordinates</div><div class="ttdef"><b>Definition:</b> pixelToWorld.cpp:29</div></div>
+<div class="ttc" id="aclassPixelToWorld_html"><div class="ttname"><a href="classPixelToWorld.html">PixelToWorld</a></div><div class="ttdoc">This class converts the pixel cordinates from camera to robot's frame of reference.</div><div class="ttdef"><b>Definition:</b> pixelToWorld.h:28</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

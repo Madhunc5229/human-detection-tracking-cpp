@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Human Detection and Tracking
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
   </td>
  </tr>
@@ -64,6 +64,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classPixelToWorld-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -76,16 +77,84 @@ $(function() {
 
 <p><code>#include &lt;<a class="el" href="pixelToWorld_8h_source.html">pixelToWorld.h</a>&gt;</code></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a8a1703f49efc733b83ea8a25bda04aad"><td class="memItemLeft" align="right" valign="top">MatrixXf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixelToWorld.html#a8a1703f49efc733b83ea8a25bda04aad">transformationMat</a> ()</td></tr>
+<tr class="memdesc:a8a1703f49efc733b83ea8a25bda04aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">computes the projection matrix to compute XYZ  <a href="classPixelToWorld.html#a8a1703f49efc733b83ea8a25bda04aad">More...</a><br /></td></tr>
+<tr class="separator:a8a1703f49efc733b83ea8a25bda04aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cc36b65d69a291384dd0ba91c7d4a59"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPixelToWorld.html#a0cc36b65d69a291384dd0ba91c7d4a59">worldPoints</a> (MatrixXf T, std::vector&lt; double &gt; pixelValues)</td></tr>
+<tr class="memdesc:a0cc36b65d69a291384dd0ba91c7d4a59"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculate the world co-ordinates  <a href="classPixelToWorld.html#a0cc36b65d69a291384dd0ba91c7d4a59">More...</a><br /></td></tr>
+<tr class="separator:a0cc36b65d69a291384dd0ba91c7d4a59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a072e6ed5d49d63bbe3350077574b4275"><td class="memItemLeft" align="right" valign="top"><a id="a072e6ed5d49d63bbe3350077574b4275"></a>
-std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pixelValues</b></td></tr>
-<tr class="separator:a072e6ed5d49d63bbe3350077574b4275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad015b98a2375896a3525d145bf5824ea"><td class="memItemLeft" align="right" valign="top"><a id="ad015b98a2375896a3525d145bf5824ea"></a>
+std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>pixelValues</b></td></tr>
+<tr class="separator:ad015b98a2375896a3525d145bf5824ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class converts the pixel cordinates from camera to robot's frame of reference. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8a1703f49efc733b83ea8a25bda04aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a1703f49efc733b83ea8a25bda04aad">&#9670;&nbsp;</a></span>transformationMat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MatrixXf PixelToWorld::transformationMat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>computes the projection matrix to compute XYZ </p>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;Mat&gt; return the projection matrix </dd></dl>
+
+</div>
+</div>
+<a id="a0cc36b65d69a291384dd0ba91c7d4a59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cc36b65d69a291384dd0ba91c7d4a59">&#9670;&nbsp;</a></span>worldPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; double &gt; PixelToWorld::worldPoints </td>
+          <td>(</td>
+          <td class="paramtype">MatrixXf&#160;</td>
+          <td class="paramname"><em>T</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; double &gt;&#160;</td>
+          <td class="paramname"><em>pixelValues</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calculate the world co-ordinates </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tramsformaMatrix</td><td>projection matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector&lt;Mat&gt; XYZ co-ordinates </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="pixelToWorld_8h_source.html">pixelToWorld.h</a></li>
+<li>src/<a class="el" href="pixelToWorld_8cpp.html">pixelToWorld.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

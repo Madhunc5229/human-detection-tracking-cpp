@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yolodetect_14',['YoloDetect',['../classYoloDetect.html',1,'']]]
+  ['yolodetect_16',['YoloDetect',['../classYoloDetect.html',1,'']]]
 ];

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Human Detection and Tracking
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
   </td>
  </tr>
@@ -75,36 +75,33 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef INCLUDE_IDENTIFIER_H_</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define INCLUDE_IDENTIFIER_H_</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;opencv2/dnn.hpp&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;opencv2/dnn.hpp&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> cv::Mat;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> cv::dnn::Net;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> cv::Mat;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classIdentifier.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIdentifier.html">Identifier</a> {</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classIdentifier.html#aad50fbe15d6f8ef43e9a38b1184209c1">   34</a></span>&#160;        <a class="code" href="classIdentifier.html#aad50fbe15d6f8ef43e9a38b1184209c1">Identifier</a>() {}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classIdentifier.html#ad49154ab081382544ea56b83c310f704">unwrapPrediction</a>();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classIdentifier.html#a39fd48f065d6e5ed8286beb06e5083e3">drawIdentifier</a>(std::vector&lt;Mat&gt; &amp;outputs, std::vector&lt;std::string&gt; &amp;class_name);  <span class="comment">// NOLINT</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        std::vector&lt;Mat&gt; predicted_out;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> CONFIDENCE_THRESHOLD = 0.45;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">float</span> SCORE_THRESHOLD = 0.5;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        std::vector&lt;int&gt; class_ids;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        std::vector&lt;double&gt; class_confidence;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        std::vector&lt;cv::Rect&gt; bounding_box;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">static</span> std::vector&lt;int&gt; input_size;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif  // INCLUDE_IDENTIFIER_H_</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classIdentifier.html#aad50fbe15d6f8ef43e9a38b1184209c1">   33</a></span>&#160;  <a class="code" href="classIdentifier.html#aad50fbe15d6f8ef43e9a38b1184209c1">Identifier</a>() {}</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  std::vector&lt;double&gt; <a class="code" href="classIdentifier.html#aeb037ddd714f8bbe755f3bb6855336b4">drawIdentifier</a>(</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keyword">const</span> cv::Mat &amp;input_image, <span class="keyword">const</span> std::vector&lt;Mat&gt; &amp;predictions,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      std::vector&lt;std::string&gt; &amp;class_name);  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  std::vector&lt;Mat&gt; predicted_out;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">float</span> CONFIDENCE_THRESHOLD = 0.35;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">float</span> SCORE_THRESHOLD = 0.2;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">const</span> <span class="keywordtype">float</span> NMS_THRESHOLD = 0.2;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">static</span> std::vector&lt;float&gt; input_size;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif  // INCLUDE_IDENTIFIER_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassIdentifier_html_aad50fbe15d6f8ef43e9a38b1184209c1"><div class="ttname"><a href="classIdentifier.html#aad50fbe15d6f8ef43e9a38b1184209c1">Identifier::Identifier</a></div><div class="ttdeci">Identifier()</div><div class="ttdoc">Construct a new Identifier object.</div><div class="ttdef"><b>Definition:</b> identifier.h:34</div></div>
+<div class="ttc" id="aclassIdentifier_html_aad50fbe15d6f8ef43e9a38b1184209c1"><div class="ttname"><a href="classIdentifier.html#aad50fbe15d6f8ef43e9a38b1184209c1">Identifier::Identifier</a></div><div class="ttdeci">Identifier()</div><div class="ttdoc">Construct a new Identifier object.</div><div class="ttdef"><b>Definition:</b> identifier.h:33</div></div>
+<div class="ttc" id="aclassIdentifier_html_aeb037ddd714f8bbe755f3bb6855336b4"><div class="ttname"><a href="classIdentifier.html#aeb037ddd714f8bbe755f3bb6855336b4">Identifier::drawIdentifier</a></div><div class="ttdeci">std::vector&lt; double &gt; drawIdentifier(const cv::Mat &amp;input_image, const std::vector&lt; Mat &gt; &amp;predictions, std::vector&lt; std::string &gt; &amp;class_name)</div><div class="ttdoc">this method draws the identifier on the frame</div><div class="ttdef"><b>Definition:</b> identifier.cpp:27</div></div>
 <div class="ttc" id="aclassIdentifier_html"><div class="ttname"><a href="classIdentifier.html">Identifier</a></div><div class="ttdoc">this class helps in identifying humans in a given frame</div><div class="ttdef"><b>Definition:</b> identifier.h:27</div></div>
-<div class="ttc" id="aclassIdentifier_html_ad49154ab081382544ea56b83c310f704"><div class="ttname"><a href="classIdentifier.html#ad49154ab081382544ea56b83c310f704">Identifier::unwrapPrediction</a></div><div class="ttdeci">void unwrapPrediction()</div><div class="ttdoc">this function extracts the details for drawing a bounding box</div></div>
-<div class="ttc" id="aclassIdentifier_html_a39fd48f065d6e5ed8286beb06e5083e3"><div class="ttname"><a href="classIdentifier.html#a39fd48f065d6e5ed8286beb06e5083e3">Identifier::drawIdentifier</a></div><div class="ttdeci">int drawIdentifier(std::vector&lt; Mat &gt; &amp;outputs, std::vector&lt; std::string &gt; &amp;class_name)</div><div class="ttdoc">this method draws the identifier on the frame</div><div class="ttdef"><b>Definition:</b> identifier.cpp:25</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -9,11 +9,18 @@ This class converts the pixel cordinates from camera to robot\textquotesingle{}s
 
 {\ttfamily \#include $<$pixel\+To\+World.\+h$>$}
 
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Matrix\+Xf \mbox{\hyperlink{classPixelToWorld_a8a1703f49efc733b83ea8a25bda04aad}{transformation\+Mat}} ()
+\begin{DoxyCompactList}\small\item\em computes the projection matrix to compute X\+YZ \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classPixelToWorld_a0cc36b65d69a291384dd0ba91c7d4a59}{world\+Points}} (Matrix\+Xf T, std\+::vector$<$ double $>$ pixel\+Values)
+\begin{DoxyCompactList}\small\item\em calculate the world co-\/ordinates \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classPixelToWorld_a072e6ed5d49d63bbe3350077574b4275}\label{classPixelToWorld_a072e6ed5d49d63bbe3350077574b4275}} 
-std\+::vector$<$ int $>$ {\bfseries pixel\+Values}
+\mbox{\Hypertarget{classPixelToWorld_ad015b98a2375896a3525d145bf5824ea}\label{classPixelToWorld_ad015b98a2375896a3525d145bf5824ea}} 
+std\+::vector$<$ double $>$ {\bfseries pixel\+Values}
 \end{DoxyCompactItemize}
 
 
@@ -22,6 +29,41 @@ This class converts the pixel cordinates from camera to robot\textquotesingle{}s
 
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPixelToWorld_a8a1703f49efc733b83ea8a25bda04aad}\label{classPixelToWorld_a8a1703f49efc733b83ea8a25bda04aad}} 
+\index{PixelToWorld@{PixelToWorld}!transformationMat@{transformationMat}}
+\index{transformationMat@{transformationMat}!PixelToWorld@{PixelToWorld}}
+\doxysubsubsection{\texorpdfstring{transformationMat()}{transformationMat()}}
+{\footnotesize\ttfamily Matrix\+Xf Pixel\+To\+World\+::transformation\+Mat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+computes the projection matrix to compute X\+YZ 
+
+\begin{DoxyReturn}{Returns}
+vector$<$\+Mat$>$ return the projection matrix 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classPixelToWorld_a0cc36b65d69a291384dd0ba91c7d4a59}\label{classPixelToWorld_a0cc36b65d69a291384dd0ba91c7d4a59}} 
+\index{PixelToWorld@{PixelToWorld}!worldPoints@{worldPoints}}
+\index{worldPoints@{worldPoints}!PixelToWorld@{PixelToWorld}}
+\doxysubsubsection{\texorpdfstring{worldPoints()}{worldPoints()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Pixel\+To\+World\+::world\+Points (\begin{DoxyParamCaption}\item[{Matrix\+Xf}]{T,  }\item[{std\+::vector$<$ double $>$}]{pixel\+Values }\end{DoxyParamCaption})}
+
+
+
+calculate the world co-\/ordinates 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tramsforma\+Matrix} & projection matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector$<$\+Mat$>$ X\+YZ co-\/ordinates 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{pixelToWorld_8h}{pixel\+To\+World.\+h}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{pixelToWorld_8h}{pixel\+To\+World.\+h}}\item 
+src/\mbox{\hyperlink{pixelToWorld_8cpp}{pixel\+To\+World.\+cpp}}\end{DoxyCompactItemize}

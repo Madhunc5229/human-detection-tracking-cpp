@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Human Detection and Tracking
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
   </td>
  </tr>
@@ -82,12 +82,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aad50fbe15d6f8ef43e9a38b1184209c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdentifier.html#aad50fbe15d6f8ef43e9a38b1184209c1">Identifier</a> ()</td></tr>
 <tr class="memdesc:aad50fbe15d6f8ef43e9a38b1184209c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classIdentifier.html" title="this class helps in identifying humans in a given frame">Identifier</a> object.  <a href="classIdentifier.html#aad50fbe15d6f8ef43e9a38b1184209c1">More...</a><br /></td></tr>
 <tr class="separator:aad50fbe15d6f8ef43e9a38b1184209c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad49154ab081382544ea56b83c310f704"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdentifier.html#ad49154ab081382544ea56b83c310f704">unwrapPrediction</a> ()</td></tr>
-<tr class="memdesc:ad49154ab081382544ea56b83c310f704"><td class="mdescLeft">&#160;</td><td class="mdescRight">this function extracts the details for drawing a bounding box  <a href="classIdentifier.html#ad49154ab081382544ea56b83c310f704">More...</a><br /></td></tr>
-<tr class="separator:ad49154ab081382544ea56b83c310f704"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39fd48f065d6e5ed8286beb06e5083e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdentifier.html#a39fd48f065d6e5ed8286beb06e5083e3">drawIdentifier</a> (std::vector&lt; Mat &gt; &amp;outputs, std::vector&lt; std::string &gt; &amp;class_name)</td></tr>
-<tr class="memdesc:a39fd48f065d6e5ed8286beb06e5083e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method draws the identifier on the frame  <a href="classIdentifier.html#a39fd48f065d6e5ed8286beb06e5083e3">More...</a><br /></td></tr>
-<tr class="separator:a39fd48f065d6e5ed8286beb06e5083e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb037ddd714f8bbe755f3bb6855336b4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIdentifier.html#aeb037ddd714f8bbe755f3bb6855336b4">drawIdentifier</a> (const cv::Mat &amp;input_image, const std::vector&lt; Mat &gt; &amp;predictions, std::vector&lt; std::string &gt; &amp;class_name)</td></tr>
+<tr class="memdesc:aeb037ddd714f8bbe755f3bb6855336b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">this method draws the identifier on the frame  <a href="classIdentifier.html#aeb037ddd714f8bbe755f3bb6855336b4">More...</a><br /></td></tr>
+<tr class="separator:aeb037ddd714f8bbe755f3bb6855336b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -95,11 +92,14 @@ Public Attributes</h2></td></tr>
 std::vector&lt; Mat &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>predicted_out</b></td></tr>
 <tr class="separator:a5bcff6afb0e85bc0218504df8079dab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f1121a2f73a6756bef3bccdbcec84d8"><td class="memItemLeft" align="right" valign="top"><a id="a2f1121a2f73a6756bef3bccdbcec84d8"></a>
-const float&#160;</td><td class="memItemRight" valign="bottom"><b>CONFIDENCE_THRESHOLD</b> = 0.45</td></tr>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>CONFIDENCE_THRESHOLD</b> = 0.35</td></tr>
 <tr class="separator:a2f1121a2f73a6756bef3bccdbcec84d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5d19c53e691d6c07750a33eb533285f"><td class="memItemLeft" align="right" valign="top"><a id="ab5d19c53e691d6c07750a33eb533285f"></a>
-const float&#160;</td><td class="memItemRight" valign="bottom"><b>SCORE_THRESHOLD</b> = 0.5</td></tr>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>SCORE_THRESHOLD</b> = 0.2</td></tr>
 <tr class="separator:ab5d19c53e691d6c07750a33eb533285f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb8e4f815e40c2cb8d6829afab43d24"><td class="memItemLeft" align="right" valign="top"><a id="aecb8e4f815e40c2cb8d6829afab43d24"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>NMS_THRESHOLD</b> = 0.2</td></tr>
+<tr class="separator:aecb8e4f815e40c2cb8d6829afab43d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>this class helps in identifying humans in a given frame </p>
@@ -132,17 +132,23 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>SCORE_THRESHOL
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a39fd48f065d6e5ed8286beb06e5083e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39fd48f065d6e5ed8286beb06e5083e3">&#9670;&nbsp;</a></span>drawIdentifier()</h2>
+<a id="aeb037ddd714f8bbe755f3bb6855336b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb037ddd714f8bbe755f3bb6855336b4">&#9670;&nbsp;</a></span>drawIdentifier()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Identifier::drawIdentifier </td>
+          <td class="memname">std::vector&lt; double &gt; Identifier::drawIdentifier </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; Mat &gt; &amp;&#160;</td>
-          <td class="paramname"><em>outputs</em>, </td>
+          <td class="paramtype">const cv::Mat &amp;&#160;</td>
+          <td class="paramname"><em>input_image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; Mat &gt; &amp;&#160;</td>
+          <td class="paramname"><em>predictions</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -170,25 +176,6 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>SCORE_THRESHOL
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-
-</div>
-</div>
-<a id="ad49154ab081382544ea56b83c310f704"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad49154ab081382544ea56b83c310f704">&#9670;&nbsp;</a></span>unwrapPrediction()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Identifier::unwrapPrediction </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>this function extracts the details for drawing a bounding box </p>
 
 </div>
 </div>

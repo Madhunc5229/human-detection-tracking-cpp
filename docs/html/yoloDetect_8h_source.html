@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Human Detection and Tracking
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.2</span>
    </div>
   </td>
  </tr>
@@ -74,34 +74,33 @@ $(function() {
 <a href="yoloDetect_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef INCLUDE_YOLODETECT_H_</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define INCLUDE_YOLODETECT_H_</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;opencv2/dnn.hpp&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;opencv2/dnn.hpp&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;opencv2/opencv.hpp&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> cv::Mat;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> cv::dnn::Net;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classYoloDetect.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classYoloDetect.html">YoloDetect</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classYoloDetect.html#a18054f45deb3bfcdd98b11324139ff1d">   33</a></span>&#160;      <a class="code" href="classYoloDetect.html#a18054f45deb3bfcdd98b11324139ff1d">YoloDetect</a>() {}</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;       std::vector&lt;Mat&gt; <a class="code" href="classYoloDetect.html#a1f494d18c35a602f2e98ba193bec82bc">detect</a>(Mat blob, Net &amp;net);  <span class="comment">// NOLINT</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;       Mat <a class="code" href="classYoloDetect.html#aa2c31ff2575704095b76261fbd3d7ca3">preProcess</a>( Mat &amp;input_frame);  <span class="comment">// NOLINT</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;       std::vector&lt;Mat&gt; input_frame;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;       <span class="keyword">static</span> std::vector&lt;int&gt; input_size;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif  // INCLUDE_YOLODETECT_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> cv::Mat;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> cv::dnn::Net;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classYoloDetect.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classYoloDetect.html">YoloDetect</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classYoloDetect.html#a18054f45deb3bfcdd98b11324139ff1d">   32</a></span>&#160;  <a class="code" href="classYoloDetect.html#a18054f45deb3bfcdd98b11324139ff1d">YoloDetect</a>() {}</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  std::vector&lt;Mat&gt; <a class="code" href="classYoloDetect.html#a1f494d18c35a602f2e98ba193bec82bc">detect</a>(Mat blob, Net &amp;net);  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  Mat <a class="code" href="classYoloDetect.html#aa2c31ff2575704095b76261fbd3d7ca3">preProcess</a>(Mat &amp;input_frame);  <span class="comment">// NOLINT</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  std::vector&lt;Mat&gt; input_frame;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">static</span> std::vector&lt;int&gt; input_size;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif  // INCLUDE_YOLODETECT_H_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassYoloDetect_html_a1f494d18c35a602f2e98ba193bec82bc"><div class="ttname"><a href="classYoloDetect.html#a1f494d18c35a602f2e98ba193bec82bc">YoloDetect::detect</a></div><div class="ttdeci">std::vector&lt; Mat &gt; detect(Mat blob, Net &amp;net)</div><div class="ttdoc">this function forwards the blob to the model and gets the detection</div><div class="ttdef"><b>Definition:</b> yoloDetect.cpp:39</div></div>
-<div class="ttc" id="aclassYoloDetect_html_a18054f45deb3bfcdd98b11324139ff1d"><div class="ttname"><a href="classYoloDetect.html#a18054f45deb3bfcdd98b11324139ff1d">YoloDetect::YoloDetect</a></div><div class="ttdeci">YoloDetect()</div><div class="ttdoc">Construct a new Yolo Detect object.</div><div class="ttdef"><b>Definition:</b> yoloDetect.h:33</div></div>
+<div class="ttc" id="aclassYoloDetect_html_a18054f45deb3bfcdd98b11324139ff1d"><div class="ttname"><a href="classYoloDetect.html#a18054f45deb3bfcdd98b11324139ff1d">YoloDetect::YoloDetect</a></div><div class="ttdeci">YoloDetect()</div><div class="ttdoc">Construct a new Yolo Detect object.</div><div class="ttdef"><b>Definition:</b> yoloDetect.h:32</div></div>
 <div class="ttc" id="aclassYoloDetect_html_aa2c31ff2575704095b76261fbd3d7ca3"><div class="ttname"><a href="classYoloDetect.html#aa2c31ff2575704095b76261fbd3d7ca3">YoloDetect::preProcess</a></div><div class="ttdeci">Mat preProcess(Mat &amp;input_frame)</div><div class="ttdoc">this function takes input image and converts it to input size blob</div><div class="ttdef"><b>Definition:</b> yoloDetect.cpp:23</div></div>
-<div class="ttc" id="aclassYoloDetect_html"><div class="ttname"><a href="classYoloDetect.html">YoloDetect</a></div><div class="ttdoc">this class containds methods and attributes for human detection</div><div class="ttdef"><b>Definition:</b> yoloDetect.h:27</div></div>
+<div class="ttc" id="aclassYoloDetect_html"><div class="ttname"><a href="classYoloDetect.html">YoloDetect</a></div><div class="ttdoc">this class containds methods and attributes for human detection</div><div class="ttdef"><b>Definition:</b> yoloDetect.h:26</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
