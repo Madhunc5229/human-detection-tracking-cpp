@@ -1,9 +1,5 @@
 # Install lcov for code coverage
 sudo apt-get install -y -qq lcov
-#Eigen install
-sudo apt install libeigen3-dev
-sudo apt-get install -qq g++-7
-sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-7 90
 
 # OpenCV dependencies
 sudo apt update
