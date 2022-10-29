@@ -13,9 +13,14 @@
 #include <gtest/gtest.h>
 
 #include <iostream>
+#include <string>
 
 #include "../include/identifier.h"
 #include "../include/yoloDetect.h"
+#include "../include/pixelToWorld.h"
+
+using Eigen::Matrix3f;
+using Eigen::MatrixXf;
 
 // read the test image
 Mat test_frame = cv::imread("../data/test_image.jpg");
@@ -24,6 +29,7 @@ Net test_net = cv::dnn::readNetFromONNX("../yolov5s/yolov5s.onnx");
 
 YoloDetect test;
 Identifier test_identifier;
+PixelToWorld to_world;
 
 /**
  * @brief Test 1 checks if the blobs dimension is (1,3,640,640)
@@ -67,4 +73,39 @@ TEST(Test3, testNumOfDetections){
   std::vector<double> test_num_of_humans =
       test_identifier.drawIdentifier(test_frame, detections, test_class_list);
   EXPECT_NEAR(9, test_num_of_humans.size()/2.0, 3);
+}
+
+/**
+ * @brief Test4 checks the transformation matrix based on a focal length
+ * 
+ */
+TEST(Test4, transformationMatTest){
+  MatrixXf transformation_mat(3,4);
+  MatrixXf test_transformation_mat(3,4);
+  double focalLength=27.0;
+  transformation_mat <<  focalLength, 0,0,0, 0,focalLength, 0,0 , 0,0,1,1;
+  test_transformation_mat = to_world.transformationMat();
+  EXPECT_EQ(transformation_mat, test_transformation_mat);
+}
+
+
+/**
+ * @brief Test5 checks the transformation from pixel to world cordinates
+ * 
+ */
+TEST(Test5, worldCordinatesTest){
+  std::vector<double> pixels;
+  pixels.push_back(5.0);
+  pixels.push_back(10.0);
+  std::vector<double> real_world;
+  real_world.push_back(0.37037);
+  real_world.push_back(0.740741);
+  real_world.push_back(1);
+  MatrixXf transformation_mat(3,4);
+  double focalLength=27.0;
+  transformation_mat <<  focalLength, 0,0,0, 0,focalLength, 0,0 , 0,0,1,1;
+  std::vector<double> test_real_world = to_world.worldPoints(transformation_mat, pixels);
+  EXPECT_NEAR(real_world.at(0), test_real_world.at(0),1);
+  EXPECT_NEAR(real_world.at(1), test_real_world.at(1),1);
+  EXPECT_NEAR(real_world.at(2), test_real_world.at(2),1);
 }

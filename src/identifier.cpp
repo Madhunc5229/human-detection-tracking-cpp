@@ -89,6 +89,8 @@ std::vector<double> Identifier::drawIdentifier(const cv::Mat &input_image, std::
     int no_detections = output.size();
     std::cout<<"detections "<<no_detections<<"\n";
     std::vector<double> pixels;
+    pixels.push_back(5.0);
+    pixels.push_back(10.0);
     const std::vector<cv::Scalar> colors = {cv::Scalar(255, 255, 0), cv::Scalar(0, 255, 0), cv::Scalar(0, 255, 255), cv::Scalar(255, 0, 0)};
         for (int i = 0; i < no_detections; ++i) {
             auto detection = output[i];

@@ -50,7 +50,7 @@ class YoloDetect {
   std::vector<Mat> input_frame;
 
  private:
-  static std::vector<int> input_size;
+  static std::vector<int> input_size; 
 };
 
 #endif  // INCLUDE_YOLODETECT_H_
