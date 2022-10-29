@@ -51,7 +51,6 @@ int main() {
     MatrixXf TM(3, 4);
 
     TM = to_world.transformationMat();
-    std::cout << TM << "\n";
     std::vector<double> real_world = to_world.worldPoints(TM, pixels);
     int count = 1;
     for (long unsigned int i = 0; i < 2; i = i + 3) {//NOLINT
