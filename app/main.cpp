@@ -11,7 +11,6 @@
  */
 
 #include <iostream>
-
 #include "../include/identifier.h"
 #include "../include/yoloDetect.h"
 #include "../include/pixelToWorld.h"
@@ -31,7 +30,7 @@ int main() {
   Net net;
   YoloDetect yolo;
   Identifier identify;
-  //PixelToWorld world;
+  PixelToWorld world;
 
   // load the network
   net = cv::dnn::readNetFromONNX("../yolov5s/yolov5s.onnx");
@@ -44,7 +43,11 @@ int main() {
   // get detections
   predictions = yolo.detect(blob, net);
   std::vector<double> pixels =  identify.drawIdentifier(frame, predictions, class_list);
-  std::cout << "Number of humans: " << pixels.size()/2.0;
-  cv::imshow("output",frame);
-  cv::waitKey(0);
+  std::cout << "Number of humans: " << pixels.size()/2.0<<"\n";
+  MatrixXf TM(3,4);
+  TM = world.transformationMat();
+  std::cout << "TM"<<TM<<"\n";
+  std::vector<double> RW = world.worldPoints(TM, pixels);
+  std::cout<<"size 27?"<< RW.size();
+  
 }
