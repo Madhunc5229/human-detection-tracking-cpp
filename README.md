@@ -26,7 +26,7 @@ We aim to design and deliver a robust  robust human detector and tracker using a
 Our system is built using C++ and will employ the robust YOLOv5 neural network model trained on the COCO dataset for human detection and tracking as it is one of the most accurate real-time object detection algorithms. An image from a monocular camera is pre-processed and passed to the model which outputs the location info in the image frame. It is then converted to the camera frame by using the calibration constants and then transformed into the robot's frame.
 
 ## Output  
-<img src="/results/results.png" width="450" alt="Alt text" title="">
+<img src="/results/results.png" width="500" alt="Alt text" title="">
 
 ## Requirements
  - C++ 14++
