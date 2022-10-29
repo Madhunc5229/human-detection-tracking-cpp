@@ -7,7 +7,7 @@
  *
  * @copyright Copyright (c) 2022
  *
- */ 
+ */
 #include "../include/pixelToWorld.h"
 using Eigen::Matrix3f;
 using Eigen::MatrixXf;
@@ -31,7 +31,7 @@ std::vector<double> PixelToWorld::worldPoints(MatrixXf T,
   std::vector<double> real_world;
   MatrixXf pseudo_T(4, 3);
   pseudo_T = T.completeOrthogonalDecomposition().pseudoInverse();
-  for (long unsigned int i = 0; i < pixelValues.size(); i = i + 2) {
+  for (long unsigned int i = 0; i < pixelValues.size(); i = i + 2) {// NOLINT
     double u = pixelValues.at(i);
     double v = pixelValues.at(i + 1);
     Vector3f pixel_coord;

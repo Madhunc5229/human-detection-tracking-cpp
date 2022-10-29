@@ -5,9 +5,9 @@
  * @brief Implementation of yoloDetect class
  * @version 0.1
  * @date 2022-10-19
- * 
+ *
  * @copyright Copyright (c) 2022
- * 
+ *
  */
 #include "../include/yoloDetect.h"
 
@@ -16,9 +16,9 @@ using std::vector;
 std::vector<int> YoloDetect::input_size = {640, 640};
 /**
  * @brief Converts input frame into blob
- * 
- * @param input_frame 
- * @return Mat 
+ *
+ * @param input_frame
+ * @return Mat
  */
 Mat YoloDetect::preProcess(cv::Mat &input_frame) {
   // Convert to blob.
@@ -31,10 +31,10 @@ Mat YoloDetect::preProcess(cv::Mat &input_frame) {
 }
 /**
  * @brief returns the predicted weights
- * 
- * @param blob 
- * @param net 
- * @return std::vector<Mat> 
+ *
+ * @param blob
+ * @param net
+ * @return std::vector<Mat>
  */
 std::vector<Mat> YoloDetect::detect(Mat blob, Net &net) {
   net.setInput(blob);

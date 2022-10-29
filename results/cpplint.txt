@@ -3,6 +3,7 @@ Done processing ./include/identifier.h
 Done processing ./include/pixelToWorld.h
 Done processing ./include/yoloDetect.h
 Done processing ./src/identifier.cpp
+Done processing ./src/pixelToWorld.cpp
 Done processing ./src/yoloDetect.cpp
 Done processing ./test/main.cpp
 Done processing ./test/test.cpp

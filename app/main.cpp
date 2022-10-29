@@ -9,11 +9,11 @@
  * @copyright Copyright (c) 2022
  *
  */
-
+#include <iostream>
 #include "../include/identifier.h"
 #include "../include/pixelToWorld.h"
 #include "../include/yoloDetect.h"
-#include <iostream>
+
 
 /**
  * @brief starting point for the program
@@ -52,22 +52,17 @@ int main() {
 
     TM = to_world.transformationMat();
     std::cout << TM << "\n";
-    
     std::vector<double> real_world = to_world.worldPoints(TM, pixels);
-    // int count = 1;
-    // for (long unsigned int i = 0; i < 2; i = i + 3) {
-    //   std::cout << "Person " << count
-    //             << " world coordinates :" << real_world.at(i) << ", "
-    //             << real_world.at(i + 1) << ", " << real_world.at(i + 2) << "\n";
-    //   count++;
-    // }
-    std::cout << "Pixel Co-ordinates: " << pixels.at(0) << pixels.at(1) << "\n"; 
-    std::cout << "Real World Co-ordinates: " << real_world.at(0) << real_world.at(1)<< real_world.at(2)  << "\n"; 
+    int count = 1;
+    for (long unsigned int i = 0; i < 2; i = i + 3) {//NOLINT
+      std::cout << "Person " << count
+                << " world coordinates :" << real_world.at(i) << ", "
+                << real_world.at(i + 1) << ", " << real_world.at(i + 2) << "\n";
+      count++;
+    }
     cv::imshow("Detections: ", frame);
     if (cv::waitKey(1) == 27) {
             break;
         }
-    
-    // cv::waitKey(100);
   }
 }

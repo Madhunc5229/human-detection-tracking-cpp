@@ -11,10 +11,10 @@
  */
 #ifndef INCLUDE_YOLODETECT_H_
 #define INCLUDE_YOLODETECT_H_
-
+#include <vector>
 #include <opencv2/dnn.hpp>
 #include <opencv2/opencv.hpp>
-#include <vector>
+
 
 using cv::Mat;
 using cv::dnn::Net;
@@ -50,7 +50,7 @@ class YoloDetect {
   std::vector<Mat> input_frame;
 
  private:
-  static std::vector<int> input_size; 
+  static std::vector<int> input_size;
 };
 
 #endif  // INCLUDE_YOLODETECT_H_

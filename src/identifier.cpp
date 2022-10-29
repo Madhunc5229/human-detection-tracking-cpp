@@ -24,11 +24,13 @@ std::vector<float> Identifier::input_size = {640.0, 640.0};
  * @param class_name
  * @return int
  */
-std::vector<double> Identifier::drawIdentifier(const cv::Mat &input_image, std::vector<Mat> &predictions, std::vector<std::string> &class_name) {
-    // Initialize vectors to hold outputs while unwrapping detections.
-    vector<int> class_ids;
-    vector<float> confidences;
-    vector<cv::Rect> boxes;
+std::vector<double> Identifier::drawIdentifier(
+    const cv::Mat &input_image, const std::vector<Mat> &predictions,
+    std::vector<std::string> &class_name) {
+  // Initialize vectors to hold outputs while unwrapping detections.
+  vector<int> class_ids;
+  vector<float> confidences;
+  vector<cv::Rect> boxes;
 
   struct Detection {
     int class_id;
@@ -56,52 +58,58 @@ std::vector<double> Identifier::drawIdentifier(const cv::Mat &input_image, std::
       double max_class_score;
       cv::minMaxLoc(scores, 0, &max_class_score, 0, &class_id);
 
-            if (class_id.x == 0) {
-            if (max_class_score > SCORE_THRESHOLD) {
-              count  ++;  // NOLINT
-              confidences.push_back(confidence);
-              class_ids.push_back(class_id.x);
-              float x = data[0];
-              float y = data[1];
-              float w = data[2];
-              float h = data[3];
-              int left = int((x - 0.5 * w) * x_factor);
-              int top = int((y - 0.5 * h) * y_factor);
-              int width = int(w * x_factor);
-              int height = int(h * y_factor);
-              boxes.push_back(cv::Rect(left, top, width, height));
-            }
-            }
+      if (class_id.x == 0) {
+        if (max_class_score > SCORE_THRESHOLD) {
+          count++;  // NOLINT
+          confidences.push_back(confidence);
+          class_ids.push_back(class_id.x);
+          float x = data[0];
+          float y = data[1];
+          float w = data[2];
+          float h = data[3];
+          int left = static_cast<int>((x - 0.5 * w) * x_factor);
+          int top = static_cast<int>((y - 0.5 * h) * y_factor);
+          int width = static_cast<int>(w * x_factor);
+          int height = static_cast<int>(h * y_factor);
+          boxes.push_back(cv::Rect(left, top, width, height));
         }
-        // Jump to the next row.
-        data += 85;
+      }
     }
-    std::vector<int> nms_result;
-    std::vector<Detection> output;
-    cv::dnn::NMSBoxes(boxes, confidences, SCORE_THRESHOLD, NMS_THRESHOLD, nms_result);
-    for (int i = 0; i < static_cast<int>(nms_result.size()); i++) {
-        int idx = nms_result[i];
-        Detection result;
-        result.class_id = class_ids[idx];
-        result.confidence = confidences[idx];
-        result.box = boxes[idx];
-        output.push_back(result);}
-    int no_detections = output.size();
-    std::cout<<"detections "<<no_detections<<"\n";
-    std::vector<double> pixels;
-    pixels.push_back(5.0);
-    pixels.push_back(10.0);
-    const std::vector<cv::Scalar> colors = {cv::Scalar(255, 255, 0), cv::Scalar(0, 255, 0), cv::Scalar(0, 255, 255), cv::Scalar(255, 0, 0)};
-        for (int i = 0; i < no_detections; ++i) {
-            auto detection = output[i];
-            auto box = detection.box;
-            auto classId = detection.class_id;
-            const auto color = colors[classId % colors.size()];
-            pixels.push_back(box.x);
-            pixels.push_back(box.y);
-            cv::rectangle(input_image, box, (color), 3);
-            cv::rectangle(input_image, cv::Point(box.x, box.y - 20), cv::Point(box.x + box.width, box.y), color, cv::FILLED);
-            cv::putText(input_image, (class_name[classId].c_str()+ std::to_string(i+1)), cv::Point(box.x, box.y - 5), cv::FONT_HERSHEY_SIMPLEX, 0.5, cv::Scalar(0, 0, 0));
-        }
-    return pixels;
+    // Jump to the next row.
+    data += 85;
+  }
+  std::vector<int> nms_result;
+  std::vector<Detection> output;
+  cv::dnn::NMSBoxes(boxes, confidences, SCORE_THRESHOLD, NMS_THRESHOLD,
+                    nms_result);
+  for (int i = 0; i < static_cast<int>(nms_result.size()); i++) {
+    int idx = nms_result[i];
+    Detection result;
+    result.class_id = class_ids[idx];
+    result.confidence = confidences[idx];
+    result.box = boxes[idx];
+    output.push_back(result);
+  }
+  int no_detections = output.size();
+  std::cout << "detections " << no_detections << "\n";
+  std::vector<double> pixels;
+  const std::vector<cv::Scalar> colors = {
+      cv::Scalar(255, 255, 0), cv::Scalar(0, 255, 0), cv::Scalar(0, 255, 255),
+      cv::Scalar(255, 0, 0)};
+  for (int i = 0; i < no_detections; ++i) {
+    auto detection = output[i];
+    auto box = detection.box;
+    auto classId = detection.class_id;
+    const auto color = colors[classId % colors.size()];
+    pixels.push_back(box.x);
+    pixels.push_back(box.y);
+    cv::rectangle(input_image, box, (color), 3);
+    cv::rectangle(input_image, cv::Point(box.x, box.y - 20),
+                  cv::Point(box.x + box.width, box.y), color, cv::FILLED);
+    cv::putText(input_image,
+                (class_name[classId].c_str() + std::to_string(i + 1)),
+                cv::Point(box.x, box.y - 5), cv::FONT_HERSHEY_SIMPLEX, 0.5,
+                cv::Scalar(0, 0, 0));
+  }
+  return pixels;
 }
