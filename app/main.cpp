@@ -23,10 +23,13 @@
 int main() {
   std::vector<std::string> class_list;
   class_list.push_back("person");
-
+  cv::VideoCapture cap("../data/pixel5a_video.mp4");
+  while (cap.isOpened())
+  {
   Mat frame;
+  cap.read(frame);
   // read the test image
-  frame = cv::imread("../data/test_image.jpg");
+  //frame = cv::imread("../data/test_image.jpg");
   Net net;
   YoloDetect yolo;
   Identifier identify;
@@ -53,5 +56,6 @@ int main() {
   count ++;
   }
   cv::imshow("after detection",frame);
-  cv::waitKey(0);
+  cv::waitKey(100);
+}
 }
